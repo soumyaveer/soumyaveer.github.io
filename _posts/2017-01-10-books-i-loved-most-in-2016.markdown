@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Books I Loved Most In 2016
+date:   2017-01-10 17:50:00
+categories: main
 ---
 
 > Whenever you read a good book, somewhere in the world a door opens to allow in more light" – Vera Nazarian
@@ -65,7 +67,9 @@ some action!
 This holds true even for software programmers. Some mistakes are grave and put us in
 extremely difficult situations like messed up piece of code or a poorly captured requirement,
 which can be avoided. In situations such as these we need a friend or a mentor who can give us
-some valuable advices. The Pragmatic Programmer is one such friend. Ranging from topics like importance of
+some valuable advices. The Pragmatic Programmer is one such friend.
+
+Ranging from topics like importance of
 writing the clean code to team management this book covers some very important
 aspects and principles of software development. It stresses on the importance of
 writing reusable code, DRY (Don't Repeat Yourself) Principle, avoid writing code by

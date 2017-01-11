@@ -19,6 +19,9 @@
 
 .title {
   color: darkcyan;
+  line-height: 3em;
+  letter-spacing: 0.008em;
+  font-size: 20px;
 }
 
 a:hover {
@@ -36,6 +39,11 @@ a:hover {
   margin: 40px 0;
 }
 
+.post-content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .post-content p {
   line-height: 2em;
   letter-spacing: 0.008em;
@@ -43,4 +51,14 @@ a:hover {
 
 .post-header {
   margin: 40px 0 80px;
+}
+
+#home, .site-footer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.post-header {
+  margin-left: 10%;
+  margin-right: 10%;
 }
