@@ -1,0 +1,19 @@
+.posts {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.title {
+  color: darkcyan;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.post-date {
+  float: right;
+  color: lightgrey;
+  font-size: 15px;
+}
+

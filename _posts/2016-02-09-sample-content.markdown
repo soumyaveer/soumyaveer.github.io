@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll. This is the longer title than most!"
 date:   2016-02-12 17:50:00
 categories: main
 ---
