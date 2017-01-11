@@ -1,3 +1,17 @@
+/*UTILS*/
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+/* END OF UTILS*/
+
 .posts {
   list-style-type: none;
   padding-left: 0;
@@ -17,3 +31,16 @@ a:hover {
   font-size: 15px;
 }
 
+.post-content hr {
+  height: 1px;
+  margin: 40px 0;
+}
+
+.post-content p {
+  line-height: 2em;
+  letter-spacing: 0.008em;
+}
+
+.post-header {
+  margin: 40px 0 80px;
+}
