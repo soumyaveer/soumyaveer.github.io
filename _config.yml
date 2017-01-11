@@ -1,0 +1,17 @@
+# Setup
+title:        Soumya
+tagline:      TODO
+baseurl:      ""
+paginate:     5
+
+# About/contact
+author:
+  name:       Soumya Veer
+  url:        https://soumya.site
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
