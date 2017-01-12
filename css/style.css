@@ -32,6 +32,7 @@ a:hover {
   float: right;
   color: lightgrey;
   font-size: 15px;
+  margin-top: 18px;
 }
 
 .post-content hr {
@@ -61,4 +62,8 @@ a:hover {
 .post-header {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.banner {
+  border-radius: 50%;
 }
