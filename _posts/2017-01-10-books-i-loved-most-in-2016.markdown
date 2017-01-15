@@ -3,6 +3,9 @@ layout: post
 title: Books I Loved Most In 2016
 date:   2017-01-10 17:50:00
 categories: main
+banner_image: "books.jpg"
+summary: Recently I came across a theory which says “We are average of five people in our closest inner circle”. So I chose five people in my inner circle by choosing the authors of my favorite books.
+
 ---
 
 > Whenever you read a good book, somewhere in the world a door opens to allow in more light" – Vera Nazarian
@@ -12,7 +15,6 @@ inner circle”. So I chose five people in my inner circle by choosing the autho
 favorite books, which I will love to share with you. So here are some great books that
 I read in the year 2016!
 
-- - -
 
 ### **The Design of Everyday Things** by _Dr. Donald A Norman_
 Ever got stuck outside an unlocked door of a building? You tried everything but the
@@ -34,7 +36,6 @@ of everyday actions and design challenges. This is a highly recommended book esp
 for engineers, because it gives useful insights on the design principles and urges the
 reader to think more creatively about the design flaws in products.
 
-- - -
 
 ### **Thinking Fast and Slow** by _Daniel Kahneman_
 _Cognitive Psychology_, _Cognitive Biases_, _Halo Effect_, _Anchoring Effect_,
@@ -56,7 +57,6 @@ _Hedonic Psychology_. Oh my god! What in the world is happening here? This is ex
  after a few minutes? You start feeling happy! Don’t believe me? Go ahead and try
  it yourself.
 
-- - -
 
 ### **Reamde** by _Neal Stephenson_
 _Reamde_, is _science-fiction_, _techno-thriller_ which immerses the reader in the world
@@ -68,7 +68,6 @@ viruses creating chaos.In addition to this, for gun enthusiasts, this books prov
 brilliantly choreographed shootouts, including an epic mini-war in the climax. Now that’s
 some action!
 
-- - -
 
 ### **The Pragmatic Programmer** by _Andrew Hunt, Dave Thomas_
 "To err is to human". As human beings, we are susceptible to mistakes.
@@ -88,7 +87,6 @@ software programming, this book will be a mentor to guide you through the learni
 process, giving lessons to remember for life. If you are an experienced programmer
 , well, no harm in going back to an old friend for some great advices!
 
-- - -
 
 ### **Sophie’s World** by _Jostein Gardner_
 What if you return home one day to find a note in your mailbox with these

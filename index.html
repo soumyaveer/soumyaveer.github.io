@@ -3,17 +3,21 @@ layout: home
 title: {{ site.name }}
 ---
 
-<div id="home">
-  <ul class="posts post-padding">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <div>
-            <span class="title">{{ post.title }}</span>
-            <span class="post-date">{{ post.date | date_to_string }}</span>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <ul class="list-unstyled post-list">
+      {% for post in site.posts %}
+        <li>
+          <div class="title">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
           </div>
-          </a>
-      </li>
-    {% endfor %}
-  </ul>
+          <div class="date text-muted small">{{ post.date | date_to_string }}</div>
+          <p class="summary">
+            {{ post.summary }}
+            <a href="{{ post.url }}">Read on ...</a>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
