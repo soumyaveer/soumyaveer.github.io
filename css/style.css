@@ -1,69 +1,64 @@
-/*UTILS*/
-.pull-left {
-  float: left;
+/* Global elements */
+html {
+  height: 100%;
 }
 
-.pull-right {
-  float: right;
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.clearfix {
-  overflow: hidden;
-}
-/* END OF UTILS*/
-
-.posts {
-  list-style-type: none;
-  padding-left: 0;
+footer {
+  font-size: 0.7em;
+  margin-top: 150px;
+  text-align: center;
 }
 
-.title {
-  color: darkcyan;
-  line-height: 3em;
-  letter-spacing: 0.008em;
-  font-size: 20px;
+.main-container {
+  flex: 1 0 auto;
 }
 
-a:hover {
-  text-decoration: none;
+/* Home page styles */
+.home-banner {
+  height: 70vh;
+  background: url('/assets/images/banner.jpg') center center;
+  margin-bottom: 4em;
 }
 
-.post-date {
-  float: right;
-  color: lightgrey;
-  font-size: 15px;
-  margin-top: 18px;
+.home-title {
+  background: rgba(0, 0 ,0, 0.4);
+  color: white;
+  font-size: 80%;
+  text-align: right;
+  padding: 10px 30px;
 }
 
-.post-content hr {
-  height: 1px;
-  margin: 40px 0;
+.post-list li {
+  margin-bottom: 4em;
 }
 
-.post-content {
-  margin-left: 10%;
-  margin-right: 10%;
+.post-list .title {
+  font-size: 1.4em;
 }
 
-.post-content p {
-  line-height: 2em;
-  letter-spacing: 0.008em;
+.post-list .summary {
+  margin-top: 1em;
 }
 
-.post-header {
-  margin: 40px 0 80px;
+/* Post page styles */
+.post-banner {
+  height: 70vh;
+  margin-bottom: 3em;
 }
 
-#home, .site-footer {
-  margin-left: 10%;
-  margin-right: 10%;
+.post .title {
+  margin-bottom: 2em;
+  color: #18bc9c;
 }
 
-.post-header {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.banner {
-  border-radius: 50%;
+.post h3 {
+  margin: 2em 0 1em;
 }
