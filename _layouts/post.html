@@ -12,7 +12,6 @@
                 <div class="text-right"><a href="/">Back</a></div>
                 <h1>{{ page.title }}</h1>
                 <div class="text-muted">{{ page.date | date_to_string }}</div>
-
               </div>
             </div>
           </div>
@@ -21,6 +20,9 @@
           </div>
           <div class="row">
             <div class="col-xs-12"><div class="text-right"><a href="/">Back</a></div></div>
+          </div>
+          <div class="row row-comments">
+            <div class="col-xs-12">{% include disqus_comments.html %}</div>
           </div>
         </div>
       </div>
