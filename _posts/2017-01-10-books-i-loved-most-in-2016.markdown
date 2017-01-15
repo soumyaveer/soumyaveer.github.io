@@ -11,7 +11,9 @@ Recently I came across a theory which says “We are average of five people in o
 inner circle”. So I chose five people in my inner circle by choosing the authors of my
 favorite books, which I will love to share with you. So here are some great books that
 I read in the year 2016!
+
 - - -
+
 ### **The Design of Everyday Things** by _Dr. Donald A Norman_
 Ever got stuck outside an unlocked door of a building? You tried everything but the
 door did not budge, and suddenly you saw someone walking through the same door.
@@ -31,7 +33,9 @@ of feedback can completely baffle the consumers. It plunges into details of psyc
 of everyday actions and design challenges. This is a highly recommended book especially
 for engineers, because it gives useful insights on the design principles and urges the
 reader to think more creatively about the design flaws in products.
+
 - - -
+
 ### **Thinking Fast and Slow** by _Daniel Kahneman_
 _Cognitive Psychology_, _Cognitive Biases_, _Halo Effect_, _Anchoring Effect_,
 _Hedonic Psychology_. Oh my god! What in the world is happening here? This is exactly
@@ -51,7 +55,9 @@ _Hedonic Psychology_. Oh my god! What in the world is happening here? This is ex
  horizontally in your mouth and leave it there for some time’. Any idea what happens
  after a few minutes? You start feeling happy! Don’t believe me? Go ahead and try
  it yourself.
+
 - - -
+
 ### **Reamde** by _Neal Stephenson_
 _Reamde_, is _science-fiction_, _techno-thriller_ which immerses the reader in the world
 of online multi player gaming. Fasten your seat belts for a rollercoaster ride which starts
@@ -61,7 +67,9 @@ began. Its entertaining, fast paced with Russian gangsters, computer hackers, co
 viruses creating chaos.In addition to this, for gun enthusiasts, this books provides lots of
 brilliantly choreographed shootouts, including an epic mini-war in the climax. Now that’s
 some action!
+
 - - -
+
 ### **The Pragmatic Programmer** by _Andrew Hunt, Dave Thomas_
 "To err is to human". As human beings, we are susceptible to mistakes.
 This holds true even for software programmers. Some mistakes are grave and put us in
@@ -79,7 +87,9 @@ getting clear requirements_. This book imparts a lot of information and major pi
 software programming, this book will be a mentor to guide you through the learning
 process, giving lessons to remember for life. If you are an experienced programmer
 , well, no harm in going back to an old friend for some great advices!
+
 - - -
+
 ### **Sophie’s World** by _Jostein Gardner_
 What if you return home one day to find a note in your mailbox with these
 questions 'Who are you?' and 'Where does the world come from?' What will be your
@@ -97,4 +107,3 @@ It takes us on a tour of _Medieval Ages philosophy_ and ends with the theories o
 _Sigmund Freud_. It is an interesting read, not only because the book provides us with
 enlightenment on philosophy , but also keeps you guessing about the mystery of
 'Hilde' and her connection to 'Sophie'.
-
