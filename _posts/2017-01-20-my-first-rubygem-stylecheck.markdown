@@ -3,8 +3,8 @@ layout: post
 title: My first Rubygem - Stylecheck
 date:   2017-01-20 17:50:00
 categories: main
-banner_image: "binary.jpg"
-summary: Stylecheck is the first rubygem I created and published recently. 
+banner_image: "rubygem.jpg"
+summary: Stylecheck is the first rubygem I created and published recently.
 
 ---
 
