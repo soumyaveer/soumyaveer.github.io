@@ -4,7 +4,7 @@ title: Tipping Point - Book Review
 date:  2017-02-27 13:00:00
 categories: main
 banner_image: "tippingpoint.jpeg"
-summary: Malcolm Gladwell has become one of my favourite author's recently. Everytime I read one of his books, I say to myself  "Ok. That's something new". So, this time I decided to share a book review.
+summary: Malcolm Gladwell has become one of my favourite author recently. Everytime I read one of his books, I say to myself  "Ok. That's something new". So, this time I decided to share a book review.
 ---
 
 > You know you’ve read a good book when you turn the last page and feel a little as if you have lost a friend  –Paul Sweeney
