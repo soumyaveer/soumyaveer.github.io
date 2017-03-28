@@ -72,12 +72,34 @@ Time to dive in and have a closer look at these associations:
  ..* student.build_account - instantiates the new account but does not save it.
  ..* student.create_adress - validates, creates and saves new address to the database.
 
-3. **Many-to-Many** : This association states that many instances of model has many instances of another model.
+3. **Many-to-Many** : This association states that many instances of model has many instances of another model. It needs
+a join table which stores the relation between the two models. Suppose we are saying
 It can be set up in two ways :
-..* _Has_And_Belongs_To_Many_ (HABTM) : This asociation does not require a join table. It is mor eor less a direct relation.
+..* _Has_And_Belongs_To_Many_ (HABTM) :
 For example, Teachers teach many Students and Students are taught by many Teachers.
 We can say it as :
   _Teachers has_many Students_
   _Students has_many Teachers_
 
+In this case the join table name by default will be _students_teachers_
 
+ ```ruby
+ class Teacher < ApplicationRecord
+   has_and_belongs_to_many :students
+ end
+
+ class Student < ApplicationRecord
+   has_and_belongs_to_many :teachers
+ end
+ ```
+ Now, with the establishment of HABTM relation, we get another set of methods to play around with:
+ ..* student.teachers: All teachers teaching a particular student
+ ..* student.teacher_ids: returns ids from the colection
+ ..* student.teacher_ids = [1, 2, 3] : creates collection with objects corresponding to PK values supplied.
+ ..* student.teachers.delete(teacher_1) or student.teachers.destroy(teacher_1): Deletes or Destroys the relations for teacher_1
+ ..* teachers.empty? : checks if teachers contains data
+ ..* teachers.size : checs the size of teachers collection
+ ..* student.teachers.create(attributes = {}): creates and adds objects to the collection
+
+
+..* Has Many Through : 
