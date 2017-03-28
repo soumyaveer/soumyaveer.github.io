@@ -101,5 +101,31 @@ In this case the join table name by default will be _students_teachers_
  ..* teachers.size : checs the size of teachers collection
  ..* student.teachers.create(attributes = {}): creates and adds objects to the collection
 
+HABTM is an approach which definitely looks easy, but it is a very rigid in the sense that we gain almost no flexibility
+of wokring with the relationship model independently. This problem is solved using _Has Many Through_ relation.
 
-..* Has Many Through : 
+..* Has Many Through : This is a more flexible approach under _many_to_many_ relation. Lets take an example and see what it means.
+Let us say that Students in a university are to be sent many reminders for events and each event has many students attending it.
+We can say:
+    _Students has_many Reminders_
+    _Reminders can be sent to many Students_
+
+    ```ruby
+    class Student < ApplicationRecord
+      has_many :students_reminders
+      has_many :reminders, through: :students_reminders
+    end
+
+    class StudentsReminder < ApplicationRecord
+      belongs_to :students
+      belongs_to :reminders
+    end
+
+    class Reminder < ApplicationRecord
+      has_many :students_reminders
+      has_many :students, through: :students_reminders
+    end
+    ```
+
+4. Polymorphic one-to-many: In this type of association, the model might belong to more than one other models,
+   on a single association.
