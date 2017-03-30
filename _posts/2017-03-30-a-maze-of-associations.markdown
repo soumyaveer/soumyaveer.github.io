@@ -1,29 +1,26 @@
 ---
 layout: post
-title: A maze of associations
-date:  2017-03-13 13:00:00
+title: A maze of Associations
+date:  2017-03-30 13:00:00
 categories: main
 banner_image: "maze1.png"
-summary: I find associations extremely fascinating, so decided to publish a post regarding Rails Associations. This post talks about the connection created by associations between two models, how they can be used, what methods user gets at his or her disposal, etc.
+summary: I find associations extremely fascinating, so decided to publish a post regarding Associations in Rails. This post discusses the relations created by associations between two models, how they can be used, what methods user gets at his or her disposal, etc.
 ---
 
 When I started learning rails, I was extremely confused in associations. They are like a maze in which you can get lost easily,
-if you have not understood it properly. But when I understood associations I realized that they make our life easy when we are
-trying to code in Rails.
+if you have not understood it properly. So, let's make an attempt to understand what Associations is all about.
 
-Associations serve as link between models. For example, a Post is created by an Author. Fine! But how will Rails know that these
+**Associations** serve as link between models. For example, a Post is created by an Author. Fine! But how will Rails know that these
 two models, Post and Author are related to each other. This is where Associations come into play.
 
-That sounds great but how do they work? Before getting into that, Let’s go ahead and see the types of associations and how they work.
+So, let's take plunge into the details of Associations!
 
 There are four types of associations.
 1. One-to-Many
 2. One-to-one
 3. Many-to-Many
-4. Polymorphic
+4. Polymorphic One-to-Many
 
-Time to dive in and have a closer look at these associations:
-<br/>
 <br/>
 1. **One-to-Many** : [One-to-Many](http://guides.rubyonrails.org/association_basics.html#the-has-many-association) is one of
   the most commonly used association. It states that an instance of model has many instances of another model.
@@ -41,12 +38,12 @@ Time to dive in and have a closer look at these associations:
        belongs_to :university
      end
      ```
-    `belongs_to` is usually on the other side of has_many or has_one relationship and must be specified as singular.
+    `belongs_to` is usually on the other side of has_many or has_one relationship.
 
      Once we establish _One-to-Many_ association, we get some very useful methods at our disposal:
-     * `university.students` : name of students, enrolled in a university.
-     * `student.university` : name of university student is enrolled in.
-     * `university.students << student` : adds student to the collection.
+     * `university.students` : gives us all the students, enrolled in a university.
+     * `student.university` : gives us the name of university student is enrolled in.
+     * `university.students << student1` : adds student1 to the collection.
      * `university.students.delete(@student1)` : deletes student1 from the collection. Sets foreign key to null.
      * `university.students.destroy(@student1)` : removes @student1 from collection by running destroy on each object.
      * `university.students.build({ })` : instantiates a new student but does not save it.
@@ -60,8 +57,8 @@ Time to dive in and have a closer look at these associations:
   association states that one instance of model contains exactly one instance of other model.
  What that means is, for example A student enrolled in a university owns one University Account.<br/>
   We can say:<br/>
- _A student `has_one` Account_
-
+ _A student `has_one` Account_<br/>
+ _An Account `belongs_to` a Student_
     ```ruby
     class Student < ApplicationRecord
       has_one :account
@@ -79,18 +76,17 @@ Time to dive in and have a closer look at these associations:
     <br/>
 <br/>
 
-3. **Many-to-Many** : This association states that many instances of model has many instances of another model. It needs
+3. **Many-to-Many** : This association says that many instances of model has many instances of another model. It needs
 a join table which stores the relation between the two models.
 
    It can be set up in two ways :<br/>
-    a) _Has_And_Belongs_To_Many (HABTM)_:
-
-   For example, Teachers teach many Students and Students are taught by many Teachers.
+    a) _Has_And_Belongs_To_Many (HABTM)_: In case of [Has And Belongs To Many](http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association)
+      Lets take an example and say, Teachers teach many Students and Students are taught by many Teachers.
    We can say it as :<br/>
-     _Teachers `has_many` Students_<br/>
-     _Students `has_many` Teachers_
+     _Teachers `has_and_belongs_to_many` Students_<br/>
+     _Students `has_and_belongs_to_many` Teachers_
 
-   In this case the join table name by default will be `students_teachers`
+   In this case the join table name by default will be `students_teachers`, but can be customized by the user.
 
     ```ruby
     class Teacher < ApplicationRecord
@@ -101,17 +97,17 @@ a join table which stores the relation between the two models.
       has_and_belongs_to_many :teachers
     end
     ```
-    Now, with the establishment of `HABTM` relation, we get another set of methods to play around with:
+    Now, with the establishment of _HABTM_ relation, we get another set of methods to play around with:
     * `student.teachers`: All teachers teaching a particular student
     * `student.teacher_ids`: returns ids from the colection
     * `student.teacher_ids = [1, 2, 3]` : creates collection with objects corresponding to PK values supplied.
     * `student.teachers.delete(teacher_1)` or `student.teachers.destroy(teacher_1)`: Deletes or Destroys the relations for teacher_1
     * `teachers.empty?` : checks if teachers contains data
-    * `teachers.size` : checs the size of teachers collection
+    * `teachers.size` : checks the size of teachers collection
     * `student.teachers.create(attributes = {})`: creates and adds objects to the collection.
 
-    `HABTM` is an approach which looks easy, but it is a very rigid in the sense that we gain almost no flexibility
-     of wokring with the relationship model independently. And hence it should be used only for very simple relations.
+    _HABTM_ is an approach which looks easy, but it is very rigid in the sense that we gain almost no flexibility
+     of working with the relationship model. And hence it should be used only for very simple direct relations.
      This problem is solved using _Has Many Through_ relation.
 <br/>
 <br/>
@@ -119,8 +115,10 @@ a join table which stores the relation between the two models.
    This is a more flexible approach under _many_to_many_ relation. Lets take an example and see what it means.
    Let us say that Students in a university are to be sent many reminders for events and each event has many students attending it.<br/>
    We can say: <br/>
-       _Students `has_many` Reminders_<br/>
-       _Reminders `has_many` Students_
+       _Students `has_many` Reminders `through` StudentsReminder_<br/>
+       _Reminders `has_many` Students `through` StudentsReminder_<br/>
+       _StudentsReminder `belongs_to` Students and Reminders_<br/>
+
     ```ruby
        class Student < ApplicationRecord
          has_many :students_reminders
@@ -137,9 +135,13 @@ a join table which stores the relation between the two models.
          has_many :students, through: :students_reminders
        end
      ```
+
+     _Has Many Through_ is a more flexible approach because now as we see above, we can work with
+     StudentsReminder model as well.
      <br/>
      <br/>
-4. **Polymorphic**: In this type of association, the model belongs to more than one other models,
+
+4. **Polymorphic One-to-Many**: In this type of association, the model belongs to more than one other models,
    on a single association. For example, a photo model can belong to either Student or Teacher.
 
     ```ruby
@@ -156,9 +158,13 @@ a join table which stores the relation between the two models.
     end
     ```
 
-   Now we are all set to access the photos belonging to students and teachers.<br/>
-   From an instance of Student we can say, `@student.photos`.<br/>
-   And, from an instance of Teacher model `@teacher.photos`.
-
    One important thing to remember for Polymorphic association is that we need to declare _Foregin Key_
-   column and a _Type_ column in the Photos model.
+   column and a _Type_ column in the Photos model and we are all set to start working with _Polymorphic_ relations.
+
+   Now, that we are done with setting up , we can go ahead and access the photos belonging to students and teachers.<br/>
+   From an instance of Student we can say, `@student.photos`.<br/>
+   And, from an instance of Teacher model, `@teacher.photos`.
+
+
+To summarize, in this post, we discussed what associations are, what is its importance, types of associations, a bit of implementation details
+and a few useful methods related to associations, that we get access to.
