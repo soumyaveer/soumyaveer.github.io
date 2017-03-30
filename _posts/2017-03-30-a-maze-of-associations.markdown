@@ -24,11 +24,11 @@ There are four types of associations.
 <br/>
 1. **One-to-Many** : [One-to-Many](http://guides.rubyonrails.org/association_basics.html#the-has-many-association) is one of
   the most commonly used association. It states that an instance of model has many instances of another model.
-  For example, A student is enrolled in a University but a University has many students.
+  For example, A student is enrolled in a University but a University has many students.<br/>
   We can say : <br/>
    _A University `has_many` Students._ <br/>
-   _A Student `belongs_to` a University._
-
+   _A Student `belongs_to` a University._<br/>
+<br/>
      ```ruby
      class University < ApplicationRecord
        has_many :students
@@ -58,7 +58,8 @@ There are four types of associations.
  What that means is, for example A student enrolled in a university owns one University Account.<br/>
   We can say:<br/>
  _A student `has_one` Account_<br/>
- _An Account `belongs_to` a Student_
+ _An Account `belongs_to` a Student_<br/>
+
     ```ruby
     class Student < ApplicationRecord
       has_one :account
@@ -81,10 +82,10 @@ a join table which stores the relation between the two models.
 
    It can be set up in two ways :<br/>
     a) _Has_And_Belongs_To_Many (HABTM)_: In case of [Has And Belongs To Many](http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association)
-      Lets take an example and say, Teachers teach many Students and Students are taught by many Teachers.
+      ,lets take an example and say, Teachers teach many Students and Students are taught by many Teachers.
    We can say it as :<br/>
      _Teachers `has_and_belongs_to_many` Students_<br/>
-     _Students `has_and_belongs_to_many` Teachers_
+     _Students `has_and_belongs_to_many` Teachers_<br/>
 
    In this case the join table name by default will be `students_teachers`, but can be customized by the user.
 
@@ -112,12 +113,13 @@ a join table which stores the relation between the two models.
 <br/>
 <br/>
    b) _Has Many Through_ :
-   This is a more flexible approach under _many_to_many_ relation. Lets take an example and see what it means.
+   [Has Many Through](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association) is a more flexible approach under _many_to_many_ relation. Lets take an example and see what it means.
    Let us say that Students in a university are to be sent many reminders for events and each event has many students attending it.<br/>
    We can say: <br/>
        _Students `has_many` Reminders `through` StudentsReminder_<br/>
        _Reminders `has_many` Students `through` StudentsReminder_<br/>
        _StudentsReminder `belongs_to` Students and Reminders_<br/>
+
 
     ```ruby
        class Student < ApplicationRecord
@@ -141,7 +143,7 @@ a join table which stores the relation between the two models.
      <br/>
      <br/>
 
-4. **Polymorphic One-to-Many**: In this type of association, the model belongs to more than one other models,
+4. **Polymorphic One-to-Many**: In [Polymorphic association](http://guides.rubyonrails.org/association_basics.html#polymorphic-associations), the model belongs to more than one other models,
    on a single association. For example, a photo model can belong to either Student or Teacher.
 
     ```ruby
