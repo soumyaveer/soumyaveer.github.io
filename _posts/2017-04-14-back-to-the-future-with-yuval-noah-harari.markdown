@@ -4,7 +4,7 @@ title: Back to the future with Yuval Noah Harari
 date:  2017-04-14 13:25:00
 categories: main
 banner_image: "humanevolution.jpg"
-summary: One of the most interesting books I came across this year is Sapiens:A Brief History Of Humankind. Yuval Noah Harari takes you on a journey starting from the big bang to the current era and manages to hold your interest completely throughout the book.
+summary: One of the most interesting books I came across this year was Sapiens:A Brief History Of Humankind. Yuval Noah Harari takes you on a journey starting from the big bang to the current era and manages to hold your interest completely throughout the book.
 
 ---
 
