@@ -9,13 +9,13 @@ summary: Bookdeals is my second rubygem creation. This gem shows the book deals 
 
 >"When I get a little money I buy books; and if any is left I buy food and clothes." - Desiderius Erasmus
 
-There are many ways of gaining knowledge, but the one I like most is - **Reading a Book!** When I started this project, I wanted to create something that will be helpful in enhancing knowledge by reading. Being a passionate book lover, I decided that an application which gives the current available book deals will be an interesting project to work on. And this idea resulted in the creation of `gem book_deals`.
+There are many ways of gaining knowledge, but the one I like most is - **Reading a Book!** When I started this project, I wanted to create something that will be helpful in enhancing knowledge by reading. Being a passionate book lover, I decided that an application which gives the current available book deals will be an interesting project to work on. And this idea resulted in the creation of `gem book-deals`.
 
-_What is `book_deals`?_  BookDeals is a gem which displays the latest book deals on Goodreads website.
+_What is `book-deals`?_  It is a gem which displays books with discounted prices on Goodreads website.
 
-The main focus while implementing `book_deals` was _creating a gem_ (The gem can be installed by following the `README` document provided with documentation.) and following _Object Oriented Programming_ principles.
+The main focus while implementing `book-deals` was _creating a gem_ (The gem can be installed by following the `README` document provided with documentation.) and following _Object Oriented Programming_ principles.
 
-From users point of view, it was important to look into the _ease of usability_ aspect. To conquer this, every step while executing `book_deals` was guided with helpful messages and color coded instructions.
+From users point of view, it was important to look into the _ease of usability_ aspect. To conquer this, I made sure, that every step while executing `book-deals` is guided with helpful messages and color coded instructions.
 
 Once, the user executes the program, he/she is greeted with a _Welcome screen_ followed by a _menu_. This menu contains a list of categories to select from.
 
@@ -45,7 +45,7 @@ Enter your selection:
 
 ```
 
-Now, if user wants to see the deals in category _Bestsellers_, he/she can press the number _2_ on the keyboard.
+Now, if user wants to see the deals in category _Bestsellers_, he/she can press number _2_ and enter on the keyboard.
 This displays the list of book deals with _book title_, _author name_, _description_, _deal price_, _original price_, _expiry date or time_ of the deal and the _deal purchase url_.
 
 ```shell
@@ -101,5 +101,7 @@ n
 
 Thank you for visiting BookDeals. Hope to see you soon. Goodbye!
 ```
-Working on this project was like a roller-coaster ride, filled with joy and excitement. It was also an unforgettable learning experience. Most enjoyable was the fact that I was creating something that I am passionate about - buying and reading books!
+And this is the exit point for the program.
+
+  Working on this project was like a roller-coaster ride, filled with joy and excitement. It was also an unforgettable learning experience. Most enjoyable was the fact that I was creating something that I am passionate about - buying and reading books!
 
