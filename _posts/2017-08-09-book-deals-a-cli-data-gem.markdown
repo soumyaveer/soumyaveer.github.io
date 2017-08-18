@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BookDeals - A CLI Data Gem
+title: BookDeals - Discover book deals right from your command line
 date:  2017-08-09 13:25:00
 categories: main
 banner_image: "bookshelf.jpg"
