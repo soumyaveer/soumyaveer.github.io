@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BookDeals - A CLI Data Gem
+title: BookDeals - Discover book deals right from your command line
 date:  2017-08-09 13:25:00
 categories: main
 banner_image: "bookshelf.jpg"
@@ -18,6 +18,8 @@ The main focus while implementing `book-deals` was _creating a gem_ (The gem can
 From users point of view, it was important to look into the _ease of usability_ aspect. To conquer this, I made sure, that every step while executing `book-deals` is guided with helpful messages and color coded instructions.
 
 Once, the user executes the program, he/she is greeted with a _Welcome screen_ followed by a _menu_. This menu contains a list of categories to select from.
+<br/>
+<br/>
 
 ```shell
 Welcome to Book Deals!!
@@ -44,10 +46,11 @@ Select a Category to see the deals:
 Enter your selection:
 
 ```
-
+<br/>
 Now, if user wants to see the deals in category _Bestsellers_, he/she can press number _2_ and enter on the keyboard.
 This displays the list of book deals with _book title_, _author name_, _description_, _deal price_, _original price_, _expiry date or time_ of the deal and the _deal purchase url_.
 
+<br/>
 ```shell
 Enter your selection:
 2
@@ -90,8 +93,10 @@ This book can be purchased on: https://www.goodreads.com/book/show/35267827-disc
 Total 12 deal/deals found for category Bestsellers.
 ==============================================================================
 ```
-
-After displaying all the deals for the category, the user is prompted with the question "Do you wish to continue? (y/n)". If user selects _'y'_, than he/she can continue viewing deals. Otherwise, if user selects _'n'_, the program exits with a message, "Thank you for visiting BookDeals. Hope to see you soon. Goodbye!" .
+<br/>
+After displaying all the deals for the category, the user is prompted with the question "Do you wish to continue? (y/n)". If user selects _'y'_, than he/she can continue viewing deals. Otherwise, if user selects _'n'_, the program exits with a message, "Thank you for visiting BookDeals. Hope to see you soon. Goodbye!"
+<br/>
+<br/>
 
 ```shell
 Do you want to continue viewing deals? (y/n)
@@ -101,6 +106,7 @@ n
 
 Thank you for visiting BookDeals. Hope to see you soon. Goodbye!
 ```
+<br/>
 And this is the exit point for the program.
 
   Working on this project was like a roller-coaster ride, filled with joy and excitement. It was also an unforgettable learning experience. Most enjoyable was the fact that I was creating something that I am passionate about - buying and reading books!
