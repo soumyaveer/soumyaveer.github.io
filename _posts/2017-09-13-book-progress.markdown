@@ -4,7 +4,7 @@ title: BookProgress - Track your reading progress
 date:  2017-09-13 13:25:00
 categories: main
 banner_image: "bookprogress4.jpg"
-summary: BookProgress helps you track your books and reading progress and see what others are reading.
+summary: BookProgress helps you track your books, reading progress and see what others are reading.
 ---
 > “A bookshelf is a biography written by others.” ― Kat Lehmann
 
