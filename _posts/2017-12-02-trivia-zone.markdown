@@ -3,7 +3,7 @@ layout: post
 title: TriviaZone - A fun way of testing your knowledge on the topics you love!
 date:  2017-12-02 13:25:00
 categories: main
-banner_image: "bookshelf.jpg"
+banner_image: "trivia-zone.jpeg"
 summary: Play or create trivia of the topics you love and compete for your name on the leaderboard.
 ---
 
