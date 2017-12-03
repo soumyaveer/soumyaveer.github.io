@@ -1,10 +1,10 @@
 ---
 layout: post
-title: TriviaZone - A fun way of testing your knowledge on the topics you love!
-date:  2017-12-02 13:25:00
+title: TriviaZone - A fun way of testing your knowledge!
+date:  2017-12-03 13:25:00
 categories: main
 banner_image: "trivia-zone.jpeg"
-summary: Play or create trivia of the topics you love and compete for your name on the leaderboard.
+summary: Play or create trivia and compete to see your name on the Leaderboard.
 ---
 
 The most difficult part before starting any project is to come up with something really interesting to work on. During my research for this project, I realized that my last two projects were confined to _Books_, and I wanted to expand further on this. I wanted to create something for everyone - lovers of painting, movies, books and programming like myself, etc. This is how I came up with the idea of creating **TriviaZone**, an application which is a combination of fun as well as learning experience.
