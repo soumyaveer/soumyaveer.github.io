@@ -4,7 +4,7 @@ title: ...and these were the lessons I learnt from previous projects.
 date:  2017-12-08 13:25:00
 categories: main
 banner_image: "mistake.jpg"
-summary: While working on projects, I made many mistakes and learnt from them. Here is a blog discussing my mistakes and takeaways.
+summary: While working on projects, I made many mistakes and learnt from them. Here is a blog discussing those mistakes and takeaways.
 ---
 
 > “Experience is what you get when you didn't get what you wanted. And experience is often the most valuable thing you have to offer.” ― Randy Pausch, The Last Lecture
@@ -24,15 +24,15 @@ Successful completion of a project is not enough, it is also important to learn 
       Third, with tests you can catch the boundary condition exceptions which might get overlooked if you are testing your website by refreshing it.
 
   3. **Format your code from the beginning** :
-    Formatting is important for the readability, not only for others but for the one who is coding as well. Imagine revisiting a piece of code after six months and finding that you don't understand anything that you wrote. I won't even mention someone else trying to review your code. You might think, "Oh! I'll format it later". When you start formatting in the final phases, you'll realize what a waste of time it is. Yes, you can use _indent all_ on every file, but some times _indent all_, doesn't indent properly. So, I think formatting while you are working on a file is better than revisiting it later.
+    Formatting is important for the readability, not only for others but for the one who is coding as well. Imagine revisiting a piece of code after six months and finding that you don't understand anything that you wrote. I won't even mention someone else trying to review your code. You might think, "Oh! I'll format it later". When you start formatting in the final phase, you'll realize what a waste of time it is. Yes, you can use _indent all_ on every file, but some times _indent all_, doesn't indent properly. So, I think formatting while you are working on a file is better than revisiting it later.
 
   4. **Follow the best code style practices from the beginning** :
     "Let me get this code working, code style is secondary". Yes! I have been there and trust me that's the worst thing I did to myself. When I executed `rubocop` and `scss-lint` style checks, I literally fell out of my chair and stared at the message `300 errors and 50 warnings found!` (it wasn't even a big project!). It took me more than two hours to fix them all. Please, don't do this to yourself. Adhere to the code style practice from the beginning.
 
-  5. **Update your seed data along your models**:
-    _Seeding data_ is very important, it helps you add data to database quickly. All one has to do is run the seed file instead of writing create sql in console everytime. For example, if you need to fill 10 tables with data, instead of writing 10 create SQL's , you can just run one seed file. But, if you update your model and forget all about updating your `seed` file, it will be a total waste of time revisiting it later.
+  5. **Update your seed data along with your models**:
+    _Seeding data_ is very important, it helps you add data to database quickly. All one has to do is run the seed file instead of writing create sql in console everytime. For example, if you need to fill 10 tables with data, instead of writing 10 create SQL's, you can just run one seed file. And what if you had to drop the database and re-create it again! What a nightmare! If you update your model and forget all about updating your `seed` file, it will be a total waste of time revisiting it later.
 
-      First, the purpose of seed file is defeated. If you are updating the seed data later means you ended up manually adding data to the database.
+      First, the purpose of seed file is defeated. If you update the seed data later means you ended up manually adding data to the database and thus, wasting precious time.
 
       Second, you'll have to revisit the models and update it later, which feels like a waste of time after you have finished your project.
 
@@ -46,9 +46,12 @@ Successful completion of a project is not enough, it is also important to learn 
  8. **Write comments wherever necessary** :
   I realised the importance of comments during my last project. While working on that project I had to take a break of around a month. When I returned and opened the Editor, I realised that I have totally lost track of what I was doing before I left. It took me few hours of digging my notes, finding my models and website design and reading and re-reading them to get back on track. If only I had left comments in the files, I would have saved a few hours!
 
- 9. **Commit your code every few minutes** :
- I'll tell you a story here. It begins, when I new to Ruby and Github. At that time I was in a habit of saving data on my local desktop and  committing it once or twice in two days. One day while I was working on my laptop, it crashed. I had to reformat the laptop to fix it. With that crash I lost two days of hard work. Moral of the story: Keep committing and pushing the data. It's very frustrating to do the same work over and over again.
+ 9. **Commit your code every few minutes and keep pushing it to Github** :
+ I'll tell you a story here. It begins, when I was new to Ruby and Github. At that time I was in a habit of saving data on my local desktop, committing and pushing it once or twice in two days. One day while I was working on my laptop, it crashed. I had to reformat the laptop to fix it. With that crash I lost two days of hard work. Moral of the story: Keep committing and pushing the data. It's very frustrating to do the same work over and over again.
 
     Not only that, Committing is also important because it records what changes you made in your work. It's a history of your work. The more accurate it is, the better. And the best way to make it accurate is to commit every few minutes.
+
+ 10. **Make sure you understand what you have written** :
+ "Oh! it still shows the same exception, let me try changing it a little". Please, don't do that. It is very tempting to keep guessing what might have gone wrong and fix the error, but it does not help in the long run. You might be able to resolve that particular issue, but you'll never understand why was it resolved. Everytime you get an error or an exception, try to read it and understand what is happening behind the scenes and then work on the solution. That way you'll be able to understand the issue and the solution that you used to fix it, and next time it occurs, you'll be ready to deal with it!
 
 These are some of the major mistakes I made while working on the projects. I learnt a lot from them, sometimes the hard way. Hope someone else will also be able to learn something from my mistakes.
