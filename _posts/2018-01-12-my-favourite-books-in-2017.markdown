@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Favourite Books in 2017
+title: My Favourite Books of 2017
 date:  2018-01-12 13:25:00
 categories: main
 banner_image: "books2.jpeg"
