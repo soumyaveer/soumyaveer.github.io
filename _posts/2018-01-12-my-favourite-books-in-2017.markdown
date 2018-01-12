@@ -23,19 +23,23 @@ In current era, one of the major forms of communication is writing - email, blog
 ### **What If?** by _Randall Munroe_
 **"How dangerous is it, really to be in the swimming pool in a thunderstorm?"**
 
-Want answer's to the weird scientific questions that your mind conjures? Look no further, here is a book that will satisfy your curiosity and will leave you laughing at the witty sarcasm. _Randall Munroe_ is the creator of _[XKCD](https://xkcd.com/)_, a popular website that answers scientific questions posted by people. And this book has some of the best and funniest questions. If you are a science enthusiast and haven't picked up this book yet, make sure to do it this year, it's an extremely enjoyable read.
+Want answer's to the weird scientific questions that your mind conjures? Look no further, here is a book that will satisfy your curiosity and will leave you laughing at the witty sarcasm. _Randall Munroe_ is the creator of _[XKCD](https://xkcd.com/)_, a popular website that answers scientific questions posted by people. This book has some of the best and funniest questions. If you are a science enthusiast and haven't picked up this book yet, make sure to do it this year, it's an extremely enjoyable read.
 
   ![xkcd]({{ "/assets/images/xkcd.png" }})
 
-### **The Book Thief** by _Markuz Zuask_
-_The Book Thief_ is the story of an orphan girl - _Liesel Meminger_. Set during the World WarII in Germany, it shows the courage of this orphan girl, her foster family, her neighbors and the jew hidden in her basement. Liesel has one true love - _books_, which forces her to become a _Book Thief_. She learns to read and her passion for books keeps the spirits of her family, friends and neighbors high during the frightening nights of air raids. What makes this book unique is that the whole story of Liesel Meminger is narrated by _Death!_
+### **The Book Thief** by _Markus Zuask_
+_The Book Thief_ is the story of an orphan girl - _Liesel Meminger_. Set during the World WarII in Germany, it shows the courage of this orphan girl, her foster family, her neighbors and the jew hidden in her basement. Liesel has one true love - _books_, which forces her to become a _Book Thief_. She learns to read and her passion for books keeps the spirits of her family, friends and neighbors high during the fateful nights of air raids.
+
+Even before picking this book up, I had high expectations from it beacuse I heard a lot of good reviews. And I must say that the book did not disappoint. Over a period of time while reading the book, you fall in love with all the characters, especially, Liesel and her foster father. What makes this book unique is that the whole story of Liesel Meminger is narrated by _Death!_
 
 ### **The Martian** by _Andy Weir_
-What will you do, if you are stranded in the middle of nowhere? Maybe call for help! What if, that nowhere is planet Mars? Sounds scary! _Astronaut Mark Watney_ says he'll try to colonize it. _The Martian_ is the story of _Astronaut Mark Watney_, who is accidentally, left behind on Mars (presumed dead), by his crew mates. Stranded on Mars, he fights for his survival, till someone discovers he is alive and help arrives. Will Mark be able to leave Mars alive? Most of us have seen the movie, so we know the end, but even after watching the movie, I still thoroughly enjoyed this book. If you have'nt read the book, give it a try, even if you have seen the movie, the book is really, really good.
+What will you do, if you are stranded in the middle of nowhere? Maybe call for help! What if, that nowhere is planet Mars? _Astronaut Mark Watney_ says he'll try to colonize it. _The Martian_ is the story of _Astronaut Mark Watney_, who is accidentally, left behind on Mars (presumed dead), by his crew mates. Stranded on Mars, he fights for his survival, till someone discovers he is alive and help arrives. Will _Mark_ be able to leave Mars alive?
+
+ There are a lot of scientific experiments and mishaps by _Watney_, but even in adversities, his character manages to humor the readers. If you have'nt read the book yet, give it a try, the book is really, really good.
 
 ### **Wonder** by _RJ Palacio_
 _August Pullman_ is a 10 year old normal boy, except he has facial deformity, due to which he is home-schooled by his parents at home. The story begins when _Auggie's (August Pullman's)_ parents decide to send him to a school for the first time. Will _Auggie_ be able to adjust in his new school? Will his classmates ever accept him like they would accept a normal child?
 
-_Wonder_ is a heart warming story of the struggles of a 10 year old misfit boy and his family, to find happiness wherever they can and reminds us -
+_Wonder_ is a heart warming story of the struggles of a 10 year old misfit boy and his family, to find happiness wherever they can. It reminds us -
  > When given a choice between being right or being kind, choose kind. - Dr. Wayne Dyer
 
