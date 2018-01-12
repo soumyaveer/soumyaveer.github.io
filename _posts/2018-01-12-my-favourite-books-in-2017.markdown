@@ -1,14 +1,14 @@
 ---
 layout: post
-title: My Favourite Books of 2017
+title: My Favorite Books of 2017
 date:  2018-01-12 13:25:00
 categories: main
 banner_image: "books2.jpeg"
-summary: Just like every year, last year as well I came across some great books. Here are some of my favourite books, that I read in the year 2017.
+summary: Just like every year, last year as well I came across some great books. Here are some of my favorite books, that I read in the year 2017.
 ---
 > “... a mind needs books as a sword needs a whetstone, if it is to keep its edge.” ― George R.R. Martin, A Game of Thrones
 
-Books are a great source of learning, be it intellectual or emotional. At the beginning of every new year, I reflect on what I learnt last year and what were the major sources of those learning's. And just like every year, my answer is - **books**. Here are my top six favourite reads of last year.
+Books are a great source of learning, be it intellectual or emotional. At the beginning of every new year, I reflect on what I learnt last year and what were the major sources of those learning's. And just like every year, my answer is - **books**. Here are my top six favorite reads of last year.
 
 ### **Shoe Dog** by _Phil Knight_
 _Shoe Dog_ is an impressive and motivating _memoir_ by founder of _NIKE_. Starting from, _Knight_ deciding to import high-quality, low-cost athletic shoes, this book is full of risks and setbacks suffered by the company and Phil Knight. But in the end, due to the persistence and perseverance of the founder and people working for the company, NIKE becomes a brand and reaches the height of success.
