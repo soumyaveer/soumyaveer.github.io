@@ -4,7 +4,7 @@ title: TriviaZone - Making pages responsive
 date:  2018-01-30 13:25:00
 categories: main
 banner_image: "trivia-zone.jpeg"
-summary: Playing and creating new trivias is more fun with the responsive pages.
+summary: In Trivia Zone we played and created new trivias, but doing the same is more fun when the pages are responsive.
 ---
 
 **Trivia Zone** is an application that allows playing and creating trivias and compete for the top three positions on the Leaderboard. (Read more about **TriviaZone** [here](http://www.soumyathinks.com/main/2017/12/03/trivia-zone-a-fun-way-of-testing-your-knowledge.html)).
@@ -20,7 +20,7 @@ The main challenges that I came across while working on this project were:
 1. Finding the next and previous played trivias data to allow smooth navigation. This was handled by adding an attribute in `Serializer` to hold next and previous data.
 2. Loading of all JavaScript files and thus, getting `undefined id` errors for `get` requests while loading other pages. This was handled by writing _page-specific JavaScript_.
 
-Nothing is more fun than working on challenges and nothing gives more joy than overcoming those challenges. The fact that I was able to overcome the challenges, achieve the goal of making end user's experience smooth and yet again, learned a lot from **TriviaZone** project makes me very happy!
+Nothing is more fun than working on challenges and nothing gives more joy than overcoming those challenges. The fact that I was able to overcome the challenges, achieve the goal of making end user's experience smooth and yet again, learn a lot from **TriviaZone** project makes me very happy!
 
 Check out the source code of **TriviaZone** [here](https://github.com/soumyaveer/trivia-zone).
 
