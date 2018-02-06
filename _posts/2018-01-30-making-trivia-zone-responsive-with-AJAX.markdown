@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TriviaZone - Making pages responsive
+title: TriviaZone - Making pages responsive with AJAX
 date:  2018-01-30 13:25:00
 categories: main
 banner_image: "trivia-zone.jpeg"
