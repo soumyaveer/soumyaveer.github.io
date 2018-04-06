@@ -4,7 +4,7 @@ title: Book Review -  Code Name Verity by Elizabeth Wein
 date:  2018-04-06 13:25:00
 categories: main
 banner_image: "WorldWar2.jpg"
-summary: I wanted to begin year 2018 with a good historical fiction book. Becuase of my love for stories set in World War 2 era, I picked up Code Name Verity. To know my thoughts regarding the book...
+summary: I wanted to begin year 2018 with a good historical fiction book. Becuase of my love for stories set in World War-2 era, I picked up Code Name Verity. To know my thoughts regarding the book...
 ---
 ### Code Name Verity:
 #### _Rating: 5-star_
