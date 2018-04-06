@@ -3,7 +3,7 @@ layout: post
 title: Nested Forms in Rails
 date:  2017-09-29 17:30:00
 categories: main
-banner_image: "coding1.jpg"
+banner_image: "nested.jpg"
 summary: When I started reading about Nested forms, it looked difficult. But soon I realised, I am not alone on this journey. Rails has provided me with some great helpers!
 ---
 
