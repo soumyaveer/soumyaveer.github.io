@@ -8,6 +8,15 @@ author:
   name:       Soumya Veer
   url:        https://soumya.site
 
+collections:
+  technology_blog:
+    output: true
+    permalink: /technology/posts/:name
+
+  book_blog:
+    output: true
+    permalink: /personal/books/:name
+
 # Gems
 gems:
   - jekyll-paginate
