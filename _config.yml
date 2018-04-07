@@ -1,6 +1,5 @@
 title:      Notes and Musings by Soumya Veer
 baseurl:      ""
-paginate:     5
 
 author:
   name:       Soumya Veer
@@ -15,11 +14,10 @@ collections:
     output: true
     permalink: /personal/books/:name
 
-gems:
-  - jekyll-paginate
-  - jekyll-redirect-from
-
 include: ["_pages"]
 
 # Configure addons
 markdown: kramdown
+
+plugins:
+  - jekyll-redirect-from
