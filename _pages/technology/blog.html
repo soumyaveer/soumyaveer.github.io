@@ -1,0 +1,34 @@
+---
+layout: home
+permalink: /technology/blog.html
+title: {{ site.name }}
+redirect_from:
+  - /technology/
+
+---
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h3>Technology page sub navs</h3>
+    <ul>
+      <li>
+        <a href="/technology/blog">Blog</a>
+      </li>
+      <li>
+        <a href="/technology/projects">Projects</a>
+      </li>
+      <li>
+        <a href="/technology/playground">Playground</a>
+      </li>
+    </ul>
+
+    <h3>Posts</h3>
+    <ul>
+      {% for post in site.technology_blog reversed %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

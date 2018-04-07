@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
-gem 'jekyll-paginate'
 gem 'kramdown'
-# gem 'pygments.rb'
 gem 'rogue'
+
+# Jekyll plugins
+gem 'jekyll-paginate'
+gem 'jekyll-redirect-from'
