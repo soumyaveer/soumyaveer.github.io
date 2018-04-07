@@ -1,0 +1,31 @@
+---
+layout: home
+permalink: /personal/books.html
+title: {{ site.name }}
+redirect_from:
+  - /personal/
+
+---
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h3>Personal books page sub navs</h3>
+    <ul>
+      <li>
+        <a href="/personal/books">Books</a>
+      </li>
+      <li>
+        <a href="/personal/arts">Arts</a>
+      </li>
+    </ul>
+
+    <h3>Posts</h3>
+    <ul>
+      {% for post in site.book_blog reversed %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
