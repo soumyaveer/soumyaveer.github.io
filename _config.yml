@@ -1,16 +1,23 @@
-# Setup
 title:      Notes and Musings by Soumya Veer
 baseurl:      ""
-paginate:     5
 
-# About/contact
 author:
   name:       Soumya Veer
-  url:        https://soumya.site
+  url:        https://www.soumyathinks.com
 
-# Gems
-gems:
-  - jekyll-paginate
+collections:
+  technology_blog:
+    output: true
+    permalink: /technology/blog/:name
 
-#Others
+  book_blog:
+    output: true
+    permalink: /personal/books/:name
+
+include: ["_pages"]
+
+# Configure addons
 markdown: kramdown
+
+plugins:
+  - jekyll-redirect-from

@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /technology/blog.html
+title: {{ site.name }}
+redirect_from:
+  - /technology/
+
+---
+{% include navbar.html currentNavItem="technology" currentSubNavItem="blog" %}
+
+<main class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <h2 class="post-title">Posts</h2>
+      <ul class="list-unstyled list-posts">
+        {% for post in site.technology_blog reversed %}
+        <li>
+          <div>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+          <div class="date text-muted small">{{ post.date | date_to_string }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</main>
