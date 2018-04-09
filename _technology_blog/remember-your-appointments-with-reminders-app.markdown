@@ -5,6 +5,8 @@ date:  2018-04-02 18:10:00
 categories: main
 banner_image: "reminders.png"
 summary: Your personal assistant to help you manage your tasks. Never miss another appointment again!
+redirect_from:
+  - /main/2018/04/02/remember-your-appointments-with-reminders-app.html
 ---
 
 Do you find yourself forgetting birthdays of loved ones? Or worse, your own wedding anniversary? Speaking from my personal experience, this can be a huge problem. The **Reminders** app is the solution to this. It lets you setup email reminders for important tasks.
