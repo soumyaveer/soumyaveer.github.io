@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=News+Cycle");
+
+// variables
+
+$black: #000000;
+$brown-10: #5B3E33;
+$brown-20: #835E51;
+$brown-30: #DAA974;
+$light-gray: #D6D8DB;
+$white: #FFFFFF;
+$header-font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+
+// Global styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  color: $black;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+main {
+  margin-bottom: 5em;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  border-bottom: 1px dotted $black;
+
+  &:focus, &:hover {
+    border-bottom-color: $brown-20;
+    color: $brown-20;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.footer {
+  bottom: 0;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-light {
+  background: $white;
+  border-bottom: 1px solid $light-gray;
+
+  a {
+    border-bottom: 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: $black;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $brown-20;
+    }
+  }
+
+  .active .nav-link {
+    font-weight: bold;
+  }
+}
+
+// Home page styles
+
+.container-home {
+  padding-top: 3em;
+}
+
+.container-home ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0 0 3em 0;
+  text-align: center;
+}
+
+.profile-picture {
+  border-radius: 100px;
+  height: 170px;
+  margin-bottom: 2em;
+}
+
+// Post listing styles
+
+.post-title {
+  margin-bottom: 1.5em;
+}
+
+.list-posts {
+  li {
+    padding: 1em 0;
+  }
+}
+
+// Post styles
+
+.post-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  margin-bottom: 3em;
+  overflow: hidden;
+}
+
+.post {
+  .title {
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    margin: 2em 0 1em;
+  }
+}
+
+.row-comments {
+  margin-top: 8em;
+}
+
+pre {
+  background: #FFFCEF;
+  padding: 1em;
+}

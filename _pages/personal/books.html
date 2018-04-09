@@ -7,25 +7,23 @@ redirect_from:
 
 ---
 
-<div class="row">
-  <div class="col-sm-8 col-sm-offset-2">
-    <h3>Personal books page sub navs</h3>
-    <ul>
-      <li>
-        <a href="/personal/books">Books</a>
-      </li>
-      <li>
-        <a href="/personal/arts">Arts</a>
-      </li>
-    </ul>
+{% include navbar.html currentNavItem="personal" currentSubNavItem="books" %}
 
-    <h3>Posts</h3>
-    <ul>
-      {% for post in site.book_blog reversed %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <h2 class="post-title">Posts</h2>
+      <ul class="list-unstyled list-posts">
+        {% for post in site.book_blog reversed %}
+        <li>
+          <div>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+          <div class="date text-muted small">{{ post.date | date_to_string }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>

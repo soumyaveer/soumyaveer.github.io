@@ -2,31 +2,31 @@
 <html lang="en-us">
   {% include head.html %}
   <body>
-    <div class="post-banner" style="background: url('/assets/images/post-banners/{{ page.banner_image }}')"></div>
-    <div class="container main-container">
+    <div class="post-banner" style="background-image: url('/assets/images/post-banners/{{ page.banner_image }}')"></div>
+    <main class="container">
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 post">
+        <div class="col-10 offset-1 col-sm-8 offset-sm-2 post">
           <div class="row">
-            <div class="col-xs-12">
+            <div class="col-12">
               <div class="title">
-                <div class="text-right"><a href="/">Back</a></div>
-                <h1>{{ page.title }}</h1>
+                <div class="text-right"><a href="./">Back</a></div>
+                <h2>{{ page.title }}</h2>
                 <div class="text-muted">{{ page.date | date_to_string }}</div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12">{{ content }}</div>
+            <div class="col-12">{{ content }}</div>
           </div>
           <div class="row">
-            <div class="col-xs-12"><div class="text-right"><a href="/">Back</a></div></div>
+            <div class="col-12"><div class="text-right"><a href="./">Back</a></div></div>
           </div>
           <div class="row row-comments">
-            <div class="col-xs-12">{% include disqus_comments.html %}</div>
+            <div class="col-12">{% include disqus_comments.html %}</div>
           </div>
         </div>
       </div>
-    </div>
-    <footer>Made with Jekyll • <a href="https://github.com/soumyaveer/soumyaveer.github.io">Hosted on Github</a></footer>
+    </main>
+    {% include footer.html %}
   </body>
 </html>
