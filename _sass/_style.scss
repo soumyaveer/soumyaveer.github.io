@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Home page
+// Home page styles
 
 .container-home {
   padding-top: 3em;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2em;
 }
 
-// Technical blog and Personal books listing
+// Post listing styles
 
 .post-title {
   margin-bottom: 1.5em;
@@ -107,4 +107,34 @@ h1, h2, h3, h4, h5, h6 {
   li {
     padding: 1em 0;
   }
+}
+
+// Post styles
+
+.post-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  margin-bottom: 3em;
+  overflow: hidden;
+}
+
+.post {
+  .title {
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    margin: 2em 0 1em;
+  }
+}
+
+.row-comments {
+  margin-top: 8em;
+}
+
+pre {
+  background: #FFFCEF;
+  padding: 1em;
 }

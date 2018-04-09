@@ -15,7 +15,7 @@ Interesting, right?, lets see what all this can do:
   2. Setup the time for the email notification for the reminder.
   3. Setup people who need to be notified.
   
-  *Reminders** app is based on a Rails backend, with React on the frontend. To be more specific, Rails handles data persistence and the delivery of notifications (via Sidekiq). It exposes the data via an API to the frontend. The frontend uses React, Redux for state management and `react-router` for routing. 
+  **Reminders** app is based on a Rails backend, with React on the frontend. To be more specific, Rails handles data persistence and the delivery of notifications (via Sidekiq). It exposes the data via an API to the frontend. The frontend uses React, Redux for state management and `react-router` for routing. 
   
   This project was fun, as it was the first time I was using Rails as a API server. React, Redux, react-router helped me model and build a richer user interface, which otherwise would have been complicated.
    

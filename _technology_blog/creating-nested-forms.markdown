@@ -65,15 +65,14 @@ params = {
 2). `fields_for`: This helper takes two arguments. The first argument is the model for which we want to create the attributes and the second is the object. It allows the methods to be called on builder in order to generate fields.
  <br/>
  <br/>
+ <br/>
 
-    ```ruby
-
-      <%= f.fields_for :books, Book.new do |book_attributes| %>
-        <%= book_attributes.text_field :title %>
-        <%= book_attributes.text_field :author %>
-      <% end %>
-
-    ```
+  ```ruby
+  <%= f.fields_for :books, Book.new do |book_attributes| %>
+    <%= book_attributes.text_field :title %>
+    <%= book_attributes.text_field :author %>
+  <% end %>
+  ```
 
 <br/>
  Using these form helpers, we can create nested forms.
