@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md mb-4 navbar-main navbar-light">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/images/site-icons/navbar.png" alt="Soumya Veer">
+  </a>
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    {% if include.currentNavItem == 'technology' %}
+      {% include technology_subnav.html currentSubNavItem=include.currentSubNavItem %}
+      <hr class="d-md-none">
+    {% elsif include.currentNavItem == 'personal' %}
+      {% include personal_subnav.html currentSubNavItem=include.currentSubNavItem %}
+      <hr class="d-md-none">
+    {% endif %}
+
+    <ul class="navbar-nav">
+      <li class="nav-item {% if include.currentNavItem == 'technology' %} active {% endif %}">
+        <a class="nav-link" href="/technology/blog" title="Technology">Technology</a>
+      </li>
+      <li class="nav-item {% if include.currentNavItem == 'personal' %} active {% endif %}">
+        <a class="nav-link" href="/personal/books" title="Personal">Personal</a>
+      </li>
+      <li class="nav-item {% if include.currentNavItem == 'about-me' %} active {% endif %}">
+        <a class="nav-link" href="/about-me" title="About Me">About Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>

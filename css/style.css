@@ -1,26 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=News+Cycle");
 
 :root {
-  --aqua-forest: #64A36F;
-  --mine-shaft: #222222;
+  --black: #000000;
+  --brown-10: #5B3E33;
+  --brown-20: #835E51;
+  --brown-30: #DAA974;
+  --light-gray: #D6D8DB;
+  --white: #FFFFFF;
 }
 
 /* Global */
 
 body {
-  color: var(--mine-shaft);
+  color: var(--black);
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
 }
 
 a {
-  color: var(--mine-shaft);
+  color: var(--black);
   text-decoration: underline;
 }
 
 a:focus, a:hover {
-  color: var(--aqua-forest);
+  color: var(--brown-20);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,6 +43,23 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.navbar-light {
+  background: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--brown-20);
+}
+
+.navbar-light .active .nav-link {
+  font-weight: bold;
+}
 
 /* Home page */
 

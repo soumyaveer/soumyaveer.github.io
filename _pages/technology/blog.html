@@ -6,29 +6,19 @@ redirect_from:
   - /technology/
 
 ---
+{% include navbar.html currentNavItem="technology" currentSubNavItem="blog" %}
 
-<div class="row">
-  <div class="col-sm-8 col-sm-offset-2">
-    <h3>Technology page sub navs</h3>
-    <ul>
-      <li>
-        <a href="/technology/blog">Blog</a>
-      </li>
-      <li>
-        <a href="/technology/projects">Projects</a>
-      </li>
-      <li>
-        <a href="/technology/playground">Playground</a>
-      </li>
-    </ul>
-
-    <h3>Posts</h3>
-    <ul>
-      {% for post in site.technology_blog reversed %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3>Posts</h3>
+      <ul>
+        {% for post in site.technology_blog reversed %}
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
