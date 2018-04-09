@@ -9,10 +9,12 @@ collections:
   technology_blog:
     output: true
     permalink: /technology/blog/:name
+    home_url: /technology/blog
 
   book_blog:
     output: true
     permalink: /personal/books/:name
+    home_url: /personal/books
 
 include: ["_pages"]
 
