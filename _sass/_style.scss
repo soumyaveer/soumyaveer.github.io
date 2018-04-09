@@ -12,11 +12,20 @@ $header-font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
 
 // Global styles
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   color: $black;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
+}
+
+main {
+  margin-bottom: 5em;
 }
 
 a {
@@ -91,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 // Technical blog and Personal books listing
 
 .post-title {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .list-posts {
