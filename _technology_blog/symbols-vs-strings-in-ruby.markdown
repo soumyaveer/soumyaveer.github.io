@@ -6,9 +6,9 @@ categories: main
 banner_image: "different_3.jpg"
 ---
 
-`String` and `Symbol` are two built in ruby classes which give us ability of text manipulation. 
+`Symbol` and `String` are two built in ruby classes which give us ability of text manipulation. 
 
-What are **Strings** ?
+_What are **Strings** ?_
 Anything inside the _quotations_ is a string. They are the instances of `String` class.
 
   ```ruby
@@ -17,7 +17,7 @@ Anything inside the _quotations_ is a string. They are the instances of `String`
   
   ```
   
- What are **Symbols** ?
+ _What are **Symbols** ?_
  Symbols are instances of class `Symbol`. They can be identified by `:` in front of them.
  
    ```ruby
@@ -44,7 +44,7 @@ Anything inside the _quotations_ is a string. They are the instances of `String`
     ```
    
      
- 2. **Symbols** are _unique_. Same symbol will always represent the same object. Symbols are saved in `symbol_table`, every time we try to access a symbol, it retrieves it from the table, hence pointing to the same symbol.
+ 2. **Symbols** are _unique_. Same symbol will always represent the same object. Symbols are saved in `symbol_table`, every time we try to access a symbol, it is retrieved from the table, hence pointing to the same symbol.
         
         ```
           irb(main):041:0> var1 = :a
@@ -57,7 +57,7 @@ Anything inside the _quotations_ is a string. They are the instances of `String`
           => 723868  # var1 and var2 are pointing to the same object
         ```
         
-    **Strings** are _not unique_ . Same strings may represent different object. Creating two strings with same value may result is creation of a new instance of class `String` for each.
+    **Strings** are _not unique_ . Same strings may represent different object. Creating two strings may result is creation of a new instance of class `String` for each.
     
         ```
           irb(main):045:0> var3 = "a"
