@@ -3,7 +3,7 @@ layout: post
 title: Blocks, Procs and Lambdas in Ruby
 date:  2018-08-03 16:00:00
 categories: main
-banner_image: "Control3.jpg"
+banner_image: "blocks_procs_lambdas.jpg"
 ---
 What are **Blocks** , **Procs** and **Lambdas** ? 
 They are a group of statements that can be executed. They all might look similar and they are the extension of same concept `callable objects` in Ruby, but they have subtle differences.
