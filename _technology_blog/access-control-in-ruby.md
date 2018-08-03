@@ -5,7 +5,7 @@ date:  2018-07-27 16:00:00
 categories: main
 banner_image: "Control3.jpg"
 ---
-Ruby is Object Oriented Language, which means that every object is an instance of a class and every object has certain behaviors (methods). Access control is a way in which Ruby protects the behaviors (methods) defined in a class.
+Ruby is an object-oriented language, which means that every object is an instance of a class and every object has certain behaviors (methods). Access control is a way in which Ruby protects the behaviors (methods) defined in a class.
 
 Ruby provides three levels of access control:
 
@@ -17,75 +17,75 @@ Ruby provides three levels of access control:
   
   In the example below, we have  class `Album` and a Subclass - `CD`
   
-    ```
-      class Album
-        def song
-          @name = 'Shape of you' # public method
-        end
+   ```
+     class Album
+       def song
+         @name = 'Shape of you' # public method
+       end
           
-        # in method title I am accessing protected method - self.artist and private method - genre.  
-        # Note: if I say self.genre in place of genre, ruby will throw an error. Reason? You cannot call private methods on explicit reciever
+       # in method title I am accessing protected method - self.artist and private method - genre.  
+       # Note: if I say self.genre in place of genre, ruby will throw an error. Reason? You cannot call private methods on explicit reciever
         
-        def title
-          "#{self.artist} - #{genre}"  
-        end
+       def title
+         "#{self.artist} - #{genre}"  
+       end
           
-        protected
+       protected
 
-        def artist
-          @artist = 'Ed Shereen' #protected method
-        end
+       def artist
+         @artist = 'Ed Shereen' #protected method
+       end
 
-        private
+       private
 
-        def genre
-          @genre = 'Pop' #private method
-        end
-      end
+       def genre
+         @genre = 'Pop' #private method
+       end
+     end
         
-      album = Album.new
-      => #<Album:0x007f8a6482bb58> 
+     album = Album.new
+     => #<Album:0x007f8a6482bb58> 
         
-      album.song
-      => "Shape of you"  #=> accessing public method of class Album
+     album.song
+     => "Shape of you"  #=> accessing public method of class Album
         
-      album.title
-      => "Ed Shereen - Pop" #=> public method of class Album
+     album.title
+     => "Ed Shereen - Pop" #=> public method of class Album
         
-      album.artist  #=> protected method of class Album
-      NoMethodError: protected method `artist' called for #<Album:0x007f8a6482bb58 @name="Shape of you">
+     album.artist  #=> protected method of class Album
+     NoMethodError: protected method `artist' called for #<Album:0x007f8a6482bb58 @name="Shape of you">
         
-      album.genre  #=> private method of class Album
-      NoMethodError: private method `genre' called for #<Album:0x007f8a6482bb58 @name="Shape of you">
+     album.genre  #=> private method of class Album
+     NoMethodError: private method `genre' called for #<Album:0x007f8a6482bb58 @name="Shape of you">
         
-      # creating a class CD which is a subclass of Album
+     # creating a class CD which is a subclass of Album
         
-      class CD < Album
+     class CD < Album
         
-        def name_sticker   
-          self.artist         # name_sticker access the protected method of Album class
-        end
-      end
+       def name_sticker   
+         self.artist         # name_sticker access the protected method of Album class
+       end
+     end
         
-      cd = CD.new
-      => #<CD:0x007f8a64143778>
+     cd = CD.new
+     => #<CD:0x007f8a64143778>
+     
+     cd.name_sticker        # public method of class CD
+     => "Ed Shereen"
       
-      cd.name_sticker        # public method of class CD
-      => "Ed Shereen"
+     cd.title               # public method of class Album which accesses private method of Album class
+     => "Ed Shereen - Pop"
       
-      cd.title               # public method of class Album which accesses private method of Album class
-      => "Ed Shereen - Pop"
+     cd.song                # public method of class Album
+     => "Shape of you"
       
-      cd.song                # public method of class Album
-      => "Shape of you"
+     cd.artist              # protected method of class Album. It should be noted that you cannot access method artist from outside the class, but you can access it inside the subclass
+     =>NoMethodError: protected method `artist' called for #<CD:0x007fa0fd9c0810>
       
-      cd.artist              # protected method of class Album. It should be noted that you cannot access method artist from outside the class, but you can access it inside the subclass
-      =>NoMethodError: protected method `artist' called for #<CD:0x007fa0fd9c0810>
-      
-      cd.genre               # private method of class Album.
-      =>NoMethodError: private method `genre' called for #<CD:0x007fa0fd9c0810>
+     cd.genre               # private method of class Album.
+     =>NoMethodError: private method `genre' called for #<CD:0x007fa0fd9c0810>
         
-  ```
+   ```
 
  
  The table below might make the differences between the three access controls - `public`, `protected` and `private`  a bit clearer:
