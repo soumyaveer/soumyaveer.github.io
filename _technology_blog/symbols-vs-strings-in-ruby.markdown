@@ -3,7 +3,7 @@ layout: post
 title: Symbols vs Strings in Ruby
 date:  2018-07-20 13:00:00
 categories: main
-banner_image: "different_3.jpg"
+banner_image: "symbols_vs_strings.jpg"
 ---
 
 When I started learning Ruby, I was confused between strings and symbols. The purpose of symbols was quite unclear. I found myself asking this question over and over again, if symbols and strings both can be used interchangeably, why use symbols at all? It was later that I realized the elegance of symbols and the differences between the two - `String` and `Symbol`. 

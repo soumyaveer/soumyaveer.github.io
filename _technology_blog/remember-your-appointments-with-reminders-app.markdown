@@ -3,7 +3,7 @@ layout: post
 title: Reminders - remind yourself and others like a Boss! 
 date:  2018-04-02 18:10:00
 categories: main
-banner_image: "reminder_3.jpg"
+banner_image: "reminders.jpg"
 summary: Your personal assistant to help you manage your tasks. Never miss another appointment again!
 redirect_from:
   - /main/2018/04/02/remember-your-appointments-with-reminders-app.html
