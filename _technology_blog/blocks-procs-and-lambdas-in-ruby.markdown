@@ -22,10 +22,10 @@ They are a group of statements that can be executed. They all might look similar
      [1,2,3].each { |x| puts x*2 }
    
 		
-	 #multi line block
+	   #multi line block
       [1,2,3].each do |x|
         puts x*2  # block is everything between the do and end
-     	end
+      end
       
 	```
  
