@@ -3,7 +3,7 @@ layout: post
 title: Access Control in Ruby
 date:  2018-07-27 16:00:00
 categories: main
-banner_image: "Control3.jpg"
+banner_image: "access_control.jpg"
 ---
 Ruby is an object-oriented language, which means that every object is an instance of a class and every object has certain behaviors (methods). Access control is a way in which Ruby protects the behaviors (methods) defined in a class.
 
