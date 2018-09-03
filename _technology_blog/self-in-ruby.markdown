@@ -3,7 +3,7 @@ layout: post
 title: Ruby's Self
 date:  2018-08-19 23:00:00
 categories: main
-banner_image: "coding.jpg"
+banner_image: "self.gif"
 ---
 
 Ruby being an Object-Oriented language has the concept of `self`, but what is `self`?
