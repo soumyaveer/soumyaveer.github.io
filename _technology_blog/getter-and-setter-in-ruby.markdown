@@ -3,7 +3,7 @@ layout: post
 title: Creating getter and setter in Ruby
 date:  2018-09-21 21:00:00
 categories: main
-banner_image: "maze.jpg"
+banner_image: "creating-getter-and-setter-in-ruby.jpg"
 ---
 
 In Ruby, objects can't exist in isolation. They have to communicate with the other objects. *Instance variables* ([Variables is Ruby](https://www.soumyathinks.com/technology/blog/variables-in-ruby)) can be accessed only by object's own methods. Therefore, we use **getter**, which is responsible for returning the value of an instance variable and a **setter** which is responsible for setting the values of instance variables.
