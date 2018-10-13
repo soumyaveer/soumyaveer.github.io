@@ -3,29 +3,69 @@ layout: post
 title: Breadth-First Search Algorithm
 date:  2018-10-12 18:00:00
 categories: main
-banner_image: "symbols_vs_strings.jpg"
+banner_image: "BFS.png"
 ---
 
 Breadth-First-Search is a graph traversal algorithm. 
 
-You might ask, what is **Graph Traversal**? The process of visiting each node/vertex in a graph is called - graph traversal. The order in which these vertices are visited determines what algorithm we will use to traverse a graph - Breadth First Search(BFS) or Depth First Search(DFS)
+You might ask, what is **Graph Traversal**? The process of visiting each node/vertex in a graph is called - graph traversal. The order in which these vertices are visited determines what algorithm we use to traverse a graph - **Breadth First Search(BFS)** or **Depth First Search(DFS)**
 
-In this post, we will be going into the details of **BFS**.
+In this post, we will go into the details of **BFS**.
 
 ### What is BFS traversal?
-BFS algorithm traverses broadly or width-wise. It visits it's neighbors before visiting the children and uses Queue data structure.
-
-/graph image.
-
+BFS algorithm traverses broadly or width-wise. It visits it's neighbors before visiting the children and uses **Queue** data structure.
 
 ### BFS traversal explanation
 
 To determine the unvisited, visited and explored nodes, let's give them colors. 
-	* white -> unvisited
-	* gray -> visited
-	* black -> explored
+* black -> unvisited
+* red -> explored
+	
+Initially our graph is going to look like this.
+      ![Graph]({{ "/assets/images/graph.jpg" }})
 
-The first thing that we need to do in order to begin traversal is select a starting vertex. For our example let's select `A`. So we want to go to vertex `A`, and mark in as visited. Next we check if `A ` has any neighbors to explore. Since `A` has no neighbors, we move on to level 2, vertex `B` and mark it as visited. We find the neighbors of vertex `B` which are `C` and `D`. So we mark `C` and `D` as visited and `A` as explored. WE move on to next level of `B` which is `E` mark it as visited and and visit the neighbors of `E` which is `F`. Similarly, in case of vertex, `C` we have `G` and `H`, so we mark `C` as explored and `G` and `H` as visited. Since there are no more neighbors to visit for `C` and `D` we mark them as explored. We move on to `E` and find that `E` has unvisited child `I`. So we mark it as visited. Since, `I` is visited, `E` is explored and since `F` does not have any more children to visit, `F` is also explored. In the end as I also has no further children to explore, we mark I as explored as well.
+**Step 1:** We select our starting vertex as _A_ and our goal as _I_. We want to search the nodes width-wise, till we reach point _I_.
+
+![Step1]({{ "/assets/images/graph-step1.jpg" }})
+
+**Step 2:** Nodes B, C, D are reachable from node _A_. So we mark A as _explored_, _B_, _C_ and _D_ as _visited_. Marking _B_, _C_, _D_ visited also means that these nodes have to be queued.
+![Step1]({{ "/assets/images/graph-step2.jpg" }})
+
+**Step 3:** Now we select node _B_
+![Step1]({{ "/assets/images/graph-step3.jpg" }})
+
+**Step 4:** Nodes _E_ and _F_ are reachable from node _B_. We mark them as _visited_ and add them to the queue. We mark _B_ as _explored_
+![Step1]({{ "/assets/images/graph-step4.jpg" }})
+
+**Step 5:** Because there are no more nodes to visit through node _B_. We move on to the next queued node, which is node _C_. 
+![Step1]({{ "/assets/images/graph-step5.jpg" }})
+
+**Step 6:** From node _C_, we can reach node _G_. We mark _G_ as visited and is queued. _C_ is marked as _explored_.
+![Step1]({{ "/assets/images/graph-step6.jpg" }})
+
+**Step 7:** Since, there are no more nodes to visit in node _C_. We move on to node _D_
+![Step1]({{ "/assets/images/graph-step7.jpg" }})
+
+**Step 8:** We can see that from node _D_, node _H_ is reachable. So we mark node _H_ as visited and queue it. Node _D_ is marked as _explored_.
+![Step1]({{ "/assets/images/graph-step8.jpg" }})
+
+**Step 9:** All the nodes _B_, _C_ and _D_ at level 1 have been _explored_. We move on to the next queued node, which is _E_. 
+![Step1]({{ "/assets/images/graph-step9.jpg" }})
+
+**Step 10:** Node _I_ is reachable from node _E_. So we mark _I_ as visited and _E_ as explored. _I_ is queued.
+![Step1]({{ "/assets/images/graph-step10.jpg" }})
+
+**Step 11:** We check node _F_ now and observe that it has no children.So, we mark node _F_ as _explored_.
+![Step1]({{ "/assets/images/graph-step11.jpg" }})
+
+**Step 12:**  It is the same case with node _G_. It has no children. so, we mark node _G_ as explored and move on to the next queued node.
+![Step1]({{ "/assets/images/graph-step12.jpg" }})
+
+**Step 13:** Our next queued node is _H_. Here, we find an unvisited child _J_. So, we mark _J_ as _visited_ and add it to the queue. We mark _H_ as _explored_ 
+![Step1]({{ "/assets/images/graph-step13.jpg" }})
+
+**Step 14:** Finally, we reach node _I_. Node _I_ was our goal node and we have reached it, so we abandon any further search and call our BFS successful!
+![Step1]({{ "/assets/images/graph-step14.jpg" }})
 
 
 ### Algorithm for BFS
@@ -44,37 +84,19 @@ The first thing that we need to do in order to begin traversal is select a start
         4.5 Mark u as explored(black);
         4.6 Concatenate the result to the queue
 
-### Pseudo Code for BFS
-
-```javascript
-
-	bfs(v)
-	  initialize the color of all nodes as white (unvisited)
-	  create a queue
-	  queue.enqueue(v)
-	  color[v] = gray(visited)
-	  while queue is not empty
-		u = queue.dequeue
-		color[u] = gray
-		neighbors = findNeighborsOf(u)		
-		loop through neighbors
-		if color[neighbor] == white
-		  color[neighbor] = grey
-		  queue.enqueue(neighbor)
-	    color[u] = black
-```
-
 ### Time and Space complexity
 
-In the algorithm, we are only iterating only once to find the neighbors of one vertex.
-Therefore, assuming that we have n nodes,  and every node is enqueued at least once and check the edges of adjacency list once, our time complexity will beO(V + E).
+In BFS, we are iterating only once to find the neighbors of one vertex.
+Therefore, assuming that we have _n_ nodes, every node is enqueued at least once and check the edges of adjacency list once, our time complexity will be O(V + E).
 
 In case of undirected graph:
 
 	F(n) = Visiting vertices(V) + number of Edges(E) in adjacency list = O(V) + O(E)
-		 = O(V  + E)
+		 = O(V + E)
 	
 In case of directed graph:
 	
 	F(n) = Visiting vertices(V) + number of Edges(E) in adjacency list = O(V) + O(2|E|)
 		 = O(V + E)
+
+Check out the code for BFS [here](https://github.com/soumyaveer/javascript-algorithms/blob/master/src/containers/Graph.js).
