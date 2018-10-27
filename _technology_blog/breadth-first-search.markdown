@@ -25,47 +25,46 @@ Initially our graph is going to look like this.
       ![Graph]({{ "/assets/images/graph.jpg" }})
 
 **Step 1:** We select our starting vertex as _A_ and our goal as _I_. We want to search the nodes width-wise, till we reach point _I_.
-
-![Step1]({{ "/assets/images/graph-step1.jpg" }})
+![Step1]({{ "/assets/images/graph-BFS/graph-step1.jpg" }})
 
 **Step 2:** Nodes B, C, D are reachable from node _A_. So we mark A as _explored_, _B_, _C_ and _D_ as _visited_. Marking _B_, _C_, _D_ visited also means that these nodes have to be queued.
-![Step1]({{ "/assets/images/graph-step2.jpg" }})
+![Step2]({{ "/assets/images/graph-BFS/graph-step2.jpg" }})
 
 **Step 3:** Now we select node _B_
-![Step1]({{ "/assets/images/graph-step3.jpg" }})
+![Step3]({{ "/assets/images/graph-BFS/graph-step3.jpg" }})
 
 **Step 4:** Nodes _E_ and _F_ are reachable from node _B_. We mark them as _visited_ and add them to the queue. We mark _B_ as _explored_
-![Step1]({{ "/assets/images/graph-step4.jpg" }})
+![Step4]({{ "/assets/images/graph-BFS/graph-step4.jpg" }})
 
 **Step 5:** Because there are no more nodes to visit through node _B_. We move on to the next queued node, which is node _C_. 
-![Step1]({{ "/assets/images/graph-step5.jpg" }})
+![Step5]({{ "/assets/images/graph-BFS/graph-step5.jpg" }})
 
 **Step 6:** From node _C_, we can reach node _G_. We mark _G_ as visited and is queued. _C_ is marked as _explored_.
-![Step1]({{ "/assets/images/graph-step6.jpg" }})
+![Step6]({{ "/assets/images/graph-BFS/graph-step6.jpg" }})
 
 **Step 7:** Since, there are no more nodes to visit in node _C_. We move on to node _D_
-![Step1]({{ "/assets/images/graph-step7.jpg" }})
+![Step7]({{ "/assets/images/graph-BFS/graph-step7.jpg" }})
 
 **Step 8:** We can see that from node _D_, node _H_ is reachable. So we mark node _H_ as visited and queue it. Node _D_ is marked as _explored_.
-![Step1]({{ "/assets/images/graph-step8.jpg" }})
+![Step8]({{ "/assets/images/graph-BFS/graph-step8.jpg" }})
 
 **Step 9:** All the nodes _B_, _C_ and _D_ at level 1 have been _explored_. We move on to the next queued node, which is _E_. 
-![Step1]({{ "/assets/images/graph-step9.jpg" }})
+![Step9]({{ "/assets/images/graph-BFS/graph-step9.jpg" }})
 
 **Step 10:** Node _I_ is reachable from node _E_. So we mark _I_ as visited and _E_ as explored. _I_ is queued.
-![Step1]({{ "/assets/images/graph-step10.jpg" }})
+![Step10]({{ "/assets/images/graph-BFS/graph-step10.jpg" }})
 
 **Step 11:** We check node _F_ now and observe that it has no children.So, we mark node _F_ as _explored_.
-![Step1]({{ "/assets/images/graph-step11.jpg" }})
+![Step11]({{ "/assets/images/graph-BFS/graph-step11.jpg" }})
 
 **Step 12:**  It is the same case with node _G_. It has no children. so, we mark node _G_ as explored and move on to the next queued node.
-![Step1]({{ "/assets/images/graph-step12.jpg" }})
+![Step12]({{ "/assets/images/graph-BFS/graph-step12.jpg" }})
 
 **Step 13:** Our next queued node is _H_. Here, we find an unvisited child _J_. So, we mark _J_ as _visited_ and add it to the queue. We mark _H_ as _explored_ 
-![Step1]({{ "/assets/images/graph-step13.jpg" }})
+![Step13]({{ "/assets/images/graph-BFS/graph-step13.jpg" }})
 
 **Step 14:** Finally, we reach node _I_. Node _I_ was our goal node and we have reached it, so we abandon any further search and call our BFS successful!
-![Step1]({{ "/assets/images/graph-step14.jpg" }})
+![Step14]({{ "/assets/images/graph-BFS/graph-step14.jpg" }})
 
 
 ### Algorithm for BFS
