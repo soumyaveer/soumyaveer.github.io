@@ -11,6 +11,11 @@ collections:
     permalink: /technology/blog/:name
     home_url: /technology/blog
 
+  technology_projects:
+    output: true
+    permalink: /technology/projects/:name
+    home_url: /technology/projects
+
   book_blog:
     output: true
     permalink: /personal/books/:name

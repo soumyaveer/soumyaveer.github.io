@@ -1,0 +1,16 @@
+{% assign current_collection = site.collections | where: "label", page.collection | first %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body>
+    <main class="container container-technology-projects">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2 post">
+          {{content}}
+        </div>
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

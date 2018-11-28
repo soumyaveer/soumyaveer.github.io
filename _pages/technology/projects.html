@@ -7,10 +7,19 @@ title: {{ site.name }}
 
 {% include navbar.html currentNavItem="technology" currentSubNavItem="projects" %}
 
-<main class="container">
+<div class="container">
   <div class="row">
-    <div class="col-12 text-center">
-      Projects will be showcased here soon.
+    <div class="col-sm-6 offset-sm-3">
+      <h2 class="post-title">Projects</h2>
+      <ul class="list-unstyled list-posts">
+        {% for post in site.technology_projects reversed %}
+        <li>
+          <div>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
-</main>
+</div>
