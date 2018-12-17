@@ -39,10 +39,10 @@ Let us take a deep dive into the options provided in `Set-Cookie`.
 This was all about setting the cookie, but what about updating a cookie?
 A cookie can be updated by sending the same `cookie_name`, `domain`, `path` and `secure`.
 
-Example, <br/>
-Existing Cookie: <br/>
+##### Example
+**Existing Cookie** <br/>
  `Set-Cookie: name=Sam; Domain=soumyathinks.com; Path=/blog;`  <br/>
-Updated Cookie: <br/>
+**Updated Cookie** <br/>
  `Set-Cookie: name=Soumya; Domain=soumyathinks.com; Path=/blog;`
 
 
@@ -51,10 +51,10 @@ The response header will look something like this:
 
 This will update the existing cookie, because we have sent all the other details as it is and just changed the name from _Sam_ to _Soumya_. But what if we change one of the other options in the cookie? In that case it will create a whole new cookie.
 
-Example, <br/>
-Existing Cookie: <br/>
+##### Example
+**Existing Cookie** <br/>
   `Set-Cookie: name=Sam; Domain=soumyathinks.com; Path=/blog;` <br/>
-Updated Cookie: <br/>
+**Updated Cookie** <br/>
   `Set-Cookie: name=Soumya; Domain=soumyathinks.com; Path=/;`
 
 Note that I am setting a different path.
