@@ -12,7 +12,7 @@ title: {{ site.name }}
     <div class="col-sm-6 offset-sm-3">
       <h2 class="post-title">Projects</h2>
       <ul class="list-unstyled list-posts">
-        {% for post in site.technology_projects reversed %}
+        {% for post in site.technology_projects %}
         <li>
           <div>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
