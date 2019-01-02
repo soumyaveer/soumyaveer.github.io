@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://www.soumyathinks.com/assets/images/site-icons/navbar.png" height="75" width="75">
+  <a href="https://www.soumyathinks.com">
+    <img src="https://www.soumyathinks.com/assets/images/site-icons/navbar.png" height="75" width="75">
+  </a>
 </p>
 <p align="center">
   A custom Jekyll site for <a href="https://www.soumyathinks.com">soumyathinks.com</a>
