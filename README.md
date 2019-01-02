@@ -1,4 +1,9 @@
-A custom Jekyll site for soumyathinks.com
+<p align="center">
+  <img src="https://www.soumyathinks.com/assets/images/site-icons/navbar.png">
+</p>
+<p align="center">
+  A custom Jekyll site for soumyathinks.com
+</p>
 
 ### Developing
 
