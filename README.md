@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://www.soumyathinks.com/assets/images/site-icons/navbar.png">
+  <img src="https://www.soumyathinks.com/assets/images/site-icons/navbar.png" style="height: 100px;">
 </p>
 <p align="center">
-  A custom Jekyll site for soumyathinks.com
+  A custom Jekyll site for [soumyathinks.com](https://www.soumyathinks.com)
 </p>
 
 ### Developing
