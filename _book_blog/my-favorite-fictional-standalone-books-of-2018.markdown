@@ -127,6 +127,6 @@ The journey that Sadie makes is astonishing. The revelations as the book progres
 
 All the books mentioned in this blog are my **5 Star** reads. I highly recommend these books. They were worth every minute of my reading time.
 
-Coming up next week... **My Favorite Books of 2018 - Series**.
+Coming up next week... **[My Favorite Books of 2018 - Series](https://www.soumyathinks.com/personal/books/my-favorite-books-of-2018-series)**.
 
 
