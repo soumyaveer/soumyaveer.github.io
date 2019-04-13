@@ -72,4 +72,4 @@ _Kell_ serves the _Maresh Empire_, the family ruling the _Red London_. He is a m
 I loved all the characters of this book especially _Kell_ and _Lila_. At the end of the book, I wished the book never got over. But all good things must end and so did this book.
 
 
-I read a lot of series this year, but the once mentioned above were my top five picks. Coming up next... **My favorite non-fiction books of 2018**. Till then, have fun reading!!! 
+I read a lot of series this year, but the once mentioned above were my top five picks. Coming up next -  **[My favorite non-fiction books of 2018](https://www.soumyathinks.com/personal/books/my-favorite-non-fictional-books-of-2018)**. Till then, have fun reading!!! 
