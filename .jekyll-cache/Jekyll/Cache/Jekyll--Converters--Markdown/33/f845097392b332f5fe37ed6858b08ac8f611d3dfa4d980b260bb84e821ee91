@@ -1,0 +1,18 @@
+I"�<blockquote>
+  <p>“A bookshelf is a biography written by others.” ― Kat Lehmann</p>
+</blockquote>
+
+<p>Reading is my favourite hobby. Just like every book lover, I allot at least one hour to reading everyday. A few of months back I noticed a pattern - every night I sat and calculated what percentage of book I read that day. This triggered the idea of creating an app which will do the calculations for me and give me the percentage of how much I read. This is how <em>BookProgress</em> was born.</p>
+
+<p><strong>BookProgress</strong> is an application which helps you keep track of your reading activities and the percentage of book completed.
+Not only this, it also let’s you see what other people are reading and their progress.</p>
+
+<p>The main focus while developing the app was on creating a user friendly GUI. In order to ensure that a user is authenticated and authorized to access and update only his/her account information, I created a <em>Signup</em> page for the new users and a <em>Login</em> page for the users who already had an account. Once, the user is logged in, he/she can add books and keep updating their progress or can delete a book from their shelf. User is allowed to see what his/her friends are reading, how many books and what is their progress, but he/she is not allowed to change the bookshelves of other <em>BookProgress</em> members.</p>
+
+<p>A <em>Sinatra</em> based application, <em>BookProgress</em> was created using the <strong>Model-View-Controller</strong> design pattern. It consists of three models <code class="language-plaintext highlighter-rouge">User</code>, <code class="language-plaintext highlighter-rouge">Book</code> and <code class="language-plaintext highlighter-rouge">BookProgression</code>. The database used was <em>SQLITE3</em> and migrations were done using <em>ActiveRecord</em>. <em>Bootstrap</em> was used to do styling of the website.</p>
+
+<p>This project was not only a source of learning but also a source of joy. I enjoyed a lot working on the two things that I love most - Programming and Books!</p>
+
+<p>Check out the source code of <strong>BookProgress</strong> <a href="https://github.com/soumyaveer/book-progress">here</a>.</p>
+
+:ET

@@ -1,0 +1,104 @@
+I"7<blockquote>
+  <p>“When I get a little money I buy books; and if any is left I buy food and clothes.” - Desiderius Erasmus</p>
+</blockquote>
+
+<p>There are many ways of gaining knowledge, but the one I like most is - <strong>Reading a Book!</strong> When I started this project, I wanted to create something that will be helpful in enhancing knowledge by reading. Being a passionate book lover, I decided that an application which gives the current available book deals will be an interesting project to work on. And this idea resulted in the creation of <code class="language-plaintext highlighter-rouge">gem book-deals</code>.</p>
+
+<p><em>What is <code class="language-plaintext highlighter-rouge">book-deals</code>?</em>  It is a gem which displays books with discounted prices on Goodreads website.</p>
+
+<p>The main focus while implementing <code class="language-plaintext highlighter-rouge">book-deals</code> was <em>creating a gem</em> (The gem can be installed by following the <code class="language-plaintext highlighter-rouge">README</code> document provided with documentation.) and following <em>Object Oriented Programming</em> principles.</p>
+
+<p>From users point of view, it was important to look into the <em>ease of usability</em> aspect. To conquer this, I made sure, that every step while executing <code class="language-plaintext highlighter-rouge">book-deals</code> is guided with helpful messages and color coded instructions.</p>
+
+<p>Once, the user executes the program, he/she is greeted with a <em>Welcome screen</em> followed by a <em>menu</em>. This menu contains a list of categories to select from.
+<br />
+<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Book Deals!!
+<span class="o">=======================</span>
+
+Select a Category to see the deals:
+
+1. Today Only! <span class="o">(</span>Press 1 to see Today Only!<span class="o">)</span>
+
+2. Bestsellers <span class="o">(</span>Press 2 to see Bestsellers<span class="o">)</span>
+
+3. Romance <span class="o">(</span>Press 3 to see Romance<span class="o">)</span>
+
+4. Mystery &amp; Thrillers <span class="o">(</span>Press 4 to see Mystery &amp; Thrillers<span class="o">)</span>
+
+5. Fantasy &amp; Science Fiction <span class="o">(</span>Press 5 to see Fantasy &amp; Science Fiction<span class="o">)</span>
+
+6. Fiction <span class="o">(</span>Press 6 to see Fiction<span class="o">)</span>
+
+7. Nonfiction <span class="o">(</span>Press 7 to see Nonfiction<span class="o">)</span>
+
+8. Young Adult <span class="o">(</span>Press 8 to see Young Adult<span class="o">)</span>
+
+Enter your selection:
+
+</code></pre></div></div>
+<p><br />
+Now, if user wants to see the deals in category <em>Bestsellers</em>, he/she can press number <em>2</em> and enter on the keyboard.
+This displays the list of book deals with <em>book title</em>, <em>author name</em>, <em>description</em>, <em>deal price</em>, <em>original price</em>, <em>expiry date or time</em> of the deal and the <em>deal purchase url</em>.</p>
+
+<p><br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter your selection:
+2
+
+Deals <span class="k">for </span>Category - Bestsellers
+
+<span class="nt">--------------------------------------</span>
+
+Book Title: Six of Crows <span class="o">(</span>Six of Crows, <span class="c">#1)</span>
+
+Author:  Leigh Bardugo
+
+Description: From the New York Times and USA Today-bestselling author of the Grisha Trilogy. Criminal prodigy Kaz Brekker has been offered wealth beyond his wildest dreams. But to claim it, he<span class="s1">'ll have to pull off a seemingly impossible heist and a crew desperate enough and dangerous enough to get the job done.
+
+Deal Price: $2.99
+
+Original Price: $9.99
+
+Expires in: a month
+
+This book can be purchased on: https://www.goodreads.com/book/show/22294935-six-of-crows?rto=x_gr_w_activedealspage_bp
+
+==============================================================================
+
+Book Title: Disclosure
+
+Author:  Michael Crichton
+
+Description: A New York Times bestseller. An up-and-coming executive at the computer firm DigiCom, Tom Sanders is a man whose corporate future is certain. But after a closed-door meeting with his new bossâa woman who is his former lover and has been promoted to the position he expected to haveâSanders finds himself caught in a nightmarish web of deceit in which he is branded the villain.
+
+Deal Price: $1.99
+
+Original Price: $5.99
+
+Expires in: 3 days
+
+This book can be purchased on: https://www.goodreads.com/book/show/35267827-disclosure?rto=x_gr_w_activedealspage_bp
+
+==============================================================================
+Total 12 deal/deals found for category Bestsellers.
+==============================================================================
+</span></code></pre></div></div>
+<p><br />
+After displaying all the deals for the category, the user is prompted with the question “Do you wish to continue? (y/n)”. If user selects <em>‘y’</em>, than he/she can continue viewing deals. Otherwise, if user selects <em>‘n’</em>, the program exits with a message, “Thank you for visiting BookDeals. Hope to see you soon. Goodbye!”
+<br />
+<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you want to <span class="k">continue </span>viewing deals? <span class="o">(</span>y/n<span class="o">)</span>
+
+Enter your selection:
+n
+
+Thank you <span class="k">for </span>visiting BookDeals. Hope to see you soon. Goodbye!
+</code></pre></div></div>
+<p><br />
+And this is the exit point for the program.</p>
+
+<p>Working on this project was like a roller-coaster ride, filled with joy and excitement. It was also an unforgettable learning experience. Most enjoyable was the fact that I was creating something that I am passionate about - buying and reading books!</p>
+
+:ET

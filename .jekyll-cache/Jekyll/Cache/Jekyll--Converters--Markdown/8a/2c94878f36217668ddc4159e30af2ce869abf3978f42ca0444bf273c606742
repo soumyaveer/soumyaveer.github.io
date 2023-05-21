@@ -1,0 +1,67 @@
+I"S<p>“Http is a stateless protocol” we have heard this multiple times, but what does it mean? It means that server cannot figure out that two requests are coming from the same browser.</p>
+
+<p><img src="/assets/images/cookies/without_cookies.png" alt="HTTP is a stateless protocol" /></p>
+
+<p>Cookies are the answer to this problem.</p>
+
+<p><img src="/assets/images/cookies/idea.png" alt="Let's add cookies" /></p>
+
+<p>Cookies are a used to exchange information between server and browser in order to determine if the request comes from a client that already made a request before. Cookies are plain text that is sent back and forth between the client and the server with every Http request and response.</p>
+
+<p>When a web page is requested, server sets a cookie while responding back using <code class="language-plaintext highlighter-rouge">Set-Cookie</code> key.
+Browser stores these cookies and whenever a request is made by the same client, sends it back till the cookie is expired.</p>
+
+<p><img src="/assets/images/cookies/with_cookies.png" alt="Server sets a cookie while responding to the client. Cookie is sent back and forth between server and client" /></p>
+
+<p>Syntax for <code class="language-plaintext highlighter-rouge">Set-Cookie</code> is as follows:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=&lt;date&gt;; Domain=&lt;domain-value&gt;; Path=&lt;path-value&gt;; Secure;</code></p>
+
+<p>Let us take a deep dive into the options provided in <code class="language-plaintext highlighter-rouge">Set-Cookie</code>.</p>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;cookie-name&gt;=&lt;cookie-value&gt;</code> :  This is a string of format <code class="language-plaintext highlighter-rouge">key=value</code>. This is how cookie name and cookie values are set. This value is sent to the server whenever a request is made. The <code class="language-plaintext highlighter-rouge">value</code> is stored in the  HTTP header under <code class="language-plaintext highlighter-rouge">Cookie</code> without any options. 
+ <code class="language-plaintext highlighter-rouge">Cookie: value</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Expires=&lt;date&gt;</code> : This options  determines when the cookie is to be deleted by the browser. If this option is omitted, by default cookie expires when the browser is closed.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Domain=&lt;domain-value&gt;</code> : This option determines the domain for which cookie should be sent. By default, host name of the page setting the cookie is set as a domain, so the cookie value is sent whenever a request is made to the same host name.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Path=&lt;path-value&gt;</code> : Cookie is assigned to a specific path and sent to the server only if the URL path matches.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Secure</code>:  This option is a flag, which allows the cookie to be transported over SSL and HTTPS  protocols only. By default connection is automatically set to secure.</p>
+  </li>
+</ol>
+
+<p>This was all about setting the cookie, but what about updating a cookie?
+A cookie can be updated by sending the same <code class="language-plaintext highlighter-rouge">cookie_name</code>, <code class="language-plaintext highlighter-rouge">domain</code>, <code class="language-plaintext highlighter-rouge">path</code> and <code class="language-plaintext highlighter-rouge">secure</code>.</p>
+
+<h5 id="example">Example</h5>
+<p><strong>Existing Cookie</strong> <br />
+ <code class="language-plaintext highlighter-rouge">Set-Cookie: name=Sam; Domain=soumyathinks.com; Path=/blog;</code>  <br />
+<strong>Updated Cookie</strong> <br />
+ <code class="language-plaintext highlighter-rouge">Set-Cookie: name=Soumya; Domain=soumyathinks.com; Path=/blog;</code></p>
+
+<p>The response header will look something like this:
+ <code class="language-plaintext highlighter-rouge">Cookie: name=Soumya</code></p>
+
+<p>This will update the existing cookie, because we have sent all the other details as it is and just changed the name from <em>Sam</em> to <em>Soumya</em>. But what if we change one of the other options in the cookie? In that case it will create a whole new cookie.</p>
+
+<h5 id="example-1">Example</h5>
+<p><strong>Existing Cookie</strong> <br />
+  <code class="language-plaintext highlighter-rouge">Set-Cookie: name=Sam; Domain=soumyathinks.com; Path=/blog;</code> <br />
+<strong>Updated Cookie</strong> <br />
+  <code class="language-plaintext highlighter-rouge">Set-Cookie: name=Soumya; Domain=soumyathinks.com; Path=/;</code></p>
+
+<p>Note that I am setting a different path.
+In this case a whole new cookie is created with two cookies with key as “name” and the header looks like this: <br />
+ <code class="language-plaintext highlighter-rouge">Cookie: name=Sam; name=Soumya;</code></p>
+
+<p>If you want to delete the cookie, just unset its value and pass an expiration date in the past. As discussed above, the cookies are deleted automatically when browser is closed, if expiration date is not set.</p>
+
+<p>Cookies have important applications in real world like allowing user to add products to their shopping carts. They are an elegant way to customize a user session and for servers to recognize a user. This is barely scratching the surface of cookies. It is a very deep topic to learn and understand. But this is where I stop today because in my next blog I will be discussing about how cookies are used in Rails. Till then keep coding!</p>
+:ET

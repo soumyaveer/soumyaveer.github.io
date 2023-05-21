@@ -1,0 +1,120 @@
+I"�<p>Ruby is an object-oriented language, which means that every object is an instance of a class and every object has certain behaviors (methods). Access control is a way in which Ruby protects the behaviors (methods) defined in a class.</p>
+
+<p>Ruby provides three levels of access control:</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> : Public methods can be called by everyone - no access control is enforced. A class’s instance methods are public by default, which means anyone can call them.</p>
+  </li>
+  <li>
+    <p><strong>private</strong> : Private methods cannot be called with an explicit receiver - the receiver is always <code class="language-plaintext highlighter-rouge">self</code>. Private methods can be called only in the context of current object, you cannot invoke another objects private method. To make methods private, we use <code class="language-plaintext highlighter-rouge">private</code> keyword before writing a method.</p>
+  </li>
+  <li>
+    <p><strong>protected</strong>: Protected methods are like <strong>private</strong> methods. These methods can be invoked only by objects of the defining class and its subclasses. Access is kept within the family. <code class="language-plaintext highlighter-rouge">protected</code> has limited usage. To make methods protected, we use <code class="language-plaintext highlighter-rouge">protected</code> keyword before writing a method.</p>
+  </li>
+</ol>
+
+<p>In the example below, we have  class <code class="language-plaintext highlighter-rouge">Album</code> and a Subclass - <code class="language-plaintext highlighter-rouge">CD</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     class Album
+       def song
+         @name = 'Shape of you' # public method
+       end
+          
+       # in method title I am accessing protected method - self.artist and private method - genre.  
+       # Note: if I say self.genre in place of genre, ruby will throw an error. Reason? You cannot call private methods on explicit reciever
+        
+       def title
+         "#{self.artist} - #{genre}"  
+       end
+          
+       protected
+
+       def artist
+         @artist = 'Ed Shereen' #protected method
+       end
+
+       private
+
+       def genre
+         @genre = 'Pop' #private method
+       end
+     end
+        
+     album = Album.new
+     =&gt; #&lt;Album:0x007f8a6482bb58&gt; 
+        
+     album.song
+     =&gt; "Shape of you"  #=&gt; accessing public method of class Album
+        
+     album.title
+     =&gt; "Ed Shereen - Pop" #=&gt; public method of class Album
+        
+     album.artist  #=&gt; protected method of class Album
+     NoMethodError: protected method `artist' called for #&lt;Album:0x007f8a6482bb58 @name="Shape of you"&gt;
+        
+     album.genre  #=&gt; private method of class Album
+     NoMethodError: private method `genre' called for #&lt;Album:0x007f8a6482bb58 @name="Shape of you"&gt;
+        
+     # creating a class CD which is a subclass of Album
+        
+     class CD &lt; Album
+        
+       def name_sticker   
+         self.artist         # name_sticker access the protected method of Album class
+       end
+     end
+        
+     cd = CD.new
+     =&gt; #&lt;CD:0x007f8a64143778&gt;
+     
+     cd.name_sticker        # public method of class CD
+     =&gt; "Ed Shereen"
+      
+     cd.title               # public method of class Album which accesses private method of Album class
+     =&gt; "Ed Shereen - Pop"
+      
+     cd.song                # public method of class Album
+     =&gt; "Shape of you"
+      
+     cd.artist              # protected method of class Album. It should be noted that you cannot access method artist from outside the class, but you can access it inside the subclass
+     =&gt;NoMethodError: protected method `artist' called for #&lt;CD:0x007fa0fd9c0810&gt;
+      
+     cd.genre               # private method of class Album.
+     =&gt;NoMethodError: private method `genre' called for #&lt;CD:0x007fa0fd9c0810&gt;
+        
+</code></pre></div></div>
+
+<p>The table below might make the differences between the three access controls - <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">protected</code> and <code class="language-plaintext highlighter-rouge">private</code>  a bit clearer:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Methods</th>
+      <th>Inside Class</th>
+      <th>Outside Class</th>
+      <th>Inside Sub-Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Public</td>
+      <td>Yes (public_method_name)</td>
+      <td>Yes (obj.public_method_name)</td>
+      <td>Yes (public_method_name)</td>
+    </tr>
+    <tr>
+      <td>Protected</td>
+      <td>Yes (self.protected_public_name)</td>
+      <td>No</td>
+      <td>Yes (protected_method_name)</td>
+    </tr>
+    <tr>
+      <td>Private</td>
+      <td>Yes (But, Can’t say self.private_method_name</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+:ET

@@ -1,0 +1,98 @@
+I"D<p>Breadth-First-Search is a graph traversal algorithm.</p>
+
+<p>You might ask, what is <strong>Graph Traversal</strong>? The process of visiting each node/vertex in a graph is called - graph traversal. The order in which these vertices are visited determines what algorithm we use to traverse a graph - <strong>Breadth First Search(BFS)</strong> or <strong>Depth First Search(DFS)</strong></p>
+
+<p>In this post, we will go into the details of <strong>BFS</strong>.</p>
+
+<h3 id="what-is-bfs-traversal">What is BFS traversal?</h3>
+<p>BFS algorithm traverses broadly or width-wise. It visits it’s neighbors before visiting the children and uses <strong>Queue</strong> data structure.</p>
+
+<h3 id="bfs-traversal-explanation">BFS traversal explanation</h3>
+
+<p>To determine the unvisited, visited and explored nodes, let’s give them colors.</p>
+<ul>
+  <li>black -&gt; unvisited</li>
+  <li>red -&gt; explored</li>
+</ul>
+
+<p>Initially our graph is going to look like this.
+      <img src="/assets/images/graph.jpg" alt="Graph" /></p>
+
+<p><strong>Step 1:</strong> We select our starting vertex as <em>A</em> and our goal as <em>I</em>. We want to search the nodes width-wise, till we reach point <em>I</em>.
+<img src="/assets/images/graph-BFS/graph-step1.jpg" alt="Step1" /></p>
+
+<p><strong>Step 2:</strong> Nodes B, C, D are reachable from node <em>A</em>. So we mark A as <em>explored</em>, <em>B</em>, <em>C</em> and <em>D</em> as <em>visited</em>. Marking <em>B</em>, <em>C</em>, <em>D</em> visited also means that these nodes have to be queued.
+<img src="/assets/images/graph-BFS/graph-step2.jpg" alt="Step2" /></p>
+
+<p><strong>Step 3:</strong> Now we select node <em>B</em>
+<img src="/assets/images/graph-BFS/graph-step3.jpg" alt="Step3" /></p>
+
+<p><strong>Step 4:</strong> Nodes <em>E</em> and <em>F</em> are reachable from node <em>B</em>. We mark them as <em>visited</em> and add them to the queue. We mark <em>B</em> as <em>explored</em>
+<img src="/assets/images/graph-BFS/graph-step4.jpg" alt="Step4" /></p>
+
+<p><strong>Step 5:</strong> Because there are no more nodes to visit through node <em>B</em>. We move on to the next queued node, which is node <em>C</em>. 
+<img src="/assets/images/graph-BFS/graph-step5.jpg" alt="Step5" /></p>
+
+<p><strong>Step 6:</strong> From node <em>C</em>, we can reach node <em>G</em>. We mark <em>G</em> as visited and is queued. <em>C</em> is marked as <em>explored</em>.
+<img src="/assets/images/graph-BFS/graph-step6.jpg" alt="Step6" /></p>
+
+<p><strong>Step 7:</strong> Since, there are no more nodes to visit in node <em>C</em>. We move on to node <em>D</em>
+<img src="/assets/images/graph-BFS/graph-step7.jpg" alt="Step7" /></p>
+
+<p><strong>Step 8:</strong> We can see that from node <em>D</em>, node <em>H</em> is reachable. So we mark node <em>H</em> as visited and queue it. Node <em>D</em> is marked as <em>explored</em>.
+<img src="/assets/images/graph-BFS/graph-step8.jpg" alt="Step8" /></p>
+
+<p><strong>Step 9:</strong> All the nodes <em>B</em>, <em>C</em> and <em>D</em> at level 1 have been <em>explored</em>. We move on to the next queued node, which is <em>E</em>. 
+<img src="/assets/images/graph-BFS/graph-step9.jpg" alt="Step9" /></p>
+
+<p><strong>Step 10:</strong> Node <em>I</em> is reachable from node <em>E</em>. So we mark <em>I</em> as visited and <em>E</em> as explored. <em>I</em> is queued.
+<img src="/assets/images/graph-BFS/graph-step10.jpg" alt="Step10" /></p>
+
+<p><strong>Step 11:</strong> We check node <em>F</em> now and observe that it has no children.So, we mark node <em>F</em> as <em>explored</em>.
+<img src="/assets/images/graph-BFS/graph-step11.jpg" alt="Step11" /></p>
+
+<p><strong>Step 12:</strong>  It is the same case with node <em>G</em>. It has no children. so, we mark node <em>G</em> as explored and move on to the next queued node.
+<img src="/assets/images/graph-BFS/graph-step12.jpg" alt="Step12" /></p>
+
+<p><strong>Step 13:</strong> Our next queued node is <em>H</em>. Here, we find an unvisited child <em>J</em>. So, we mark <em>J</em> as <em>visited</em> and add it to the queue. We mark <em>H</em> as <em>explored</em> 
+<img src="/assets/images/graph-BFS/graph-step13.jpg" alt="Step13" /></p>
+
+<p><strong>Step 14:</strong> Finally, we reach node <em>I</em>. Node <em>I</em> was our goal node and we have reached it, so we abandon any further search and call our BFS successful!
+<img src="/assets/images/graph-BFS/graph-step14.jpg" alt="Step14" /></p>
+
+<h3 id="algorithm-for-bfs">Algorithm for BFS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 1. Create queue
+ 2. Mark starting vertex(v) as discovered (grey).
+ 3. Enqueue v to queue
+ 4. Loop through queue ,while queue is not empty:
+    4.1 Dequeue first node from queue, let's call it u.
+    4.2 Mark u as discovered (grey). The undiscovered nodes are marked white.
+    4.3 Find it's neighbors
+    4.4 Loop through each neighbor. We will call each element w:
+        4.4.1 Check is the neighbor(w) is undiscovered (white)
+              4.4.1.1 Mark it(w) as discovered (grey)
+              4.4.1.2 Enqueue the neighbor (w)
+    4.5 Mark u as explored(black);
+    4.6 Concatenate the result to the queue
+</code></pre></div></div>
+
+<h3 id="time-and-space-complexity">Time and Space complexity</h3>
+
+<p>In BFS, we are iterating only once to find the neighbors of one vertex.
+Therefore, assuming that we have <em>n</em> nodes, every node is enqueued at least once and check the edges of adjacency list once, our time complexity will be O(V + E).</p>
+
+<p>In case of undirected graph:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F(n) = Visiting vertices(V) + number of Edges(E) in adjacency list = O(V) + O(E)
+	 = O(V + E)
+</code></pre></div></div>
+
+<p>In case of directed graph:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F(n) = Visiting vertices(V) + number of Edges(E) in adjacency list = O(V) + O(2|E|)
+	 = O(V + E)
+</code></pre></div></div>
+
+<p>Check out the code for BFS <a href="https://github.com/soumyaveer/javascript-algorithms/blob/master/src/containers/Graph.js">here</a>.</p>
+:ET

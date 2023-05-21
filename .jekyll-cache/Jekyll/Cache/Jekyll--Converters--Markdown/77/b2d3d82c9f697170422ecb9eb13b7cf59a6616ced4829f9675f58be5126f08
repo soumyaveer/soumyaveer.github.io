@@ -1,0 +1,75 @@
+I"<p><strong>Namespacing</strong> is a way to group the objects that are logically related to each other, and <strong>Modules</strong> is the tool that is used to achieve this.</p>
+
+<p>From the time I started learning Ruby, I learned about <strong>Classes</strong>. <strong>Modules</strong> are similar to classes in the sense that they both contain methods, constants, etc. They are even defined in a similar way. <em>Classes</em> are defined with the keyword <code class="language-plaintext highlighter-rouge">class</code> where as to define <em>modules</em>, we use keyword <code class="language-plaintext highlighter-rouge">module</code>.</p>
+
+<p>Though classes and modules may look similar, they are not same. You cannot replace one with another, because classes can be instantiated where as modules cannot. I will not go into the details of their differences because this post is solely about modules and namespacing.</p>
+
+<p>If modules cannot be instantiated, Why use them at all?
+  Because using modules are beneficial in a few ways.</p>
+
+<ol>
+  <li>
+    <p><strong>Modules prevent name clashes.</strong> : They create a kind of package in which the methods and constants can exist without being interfered or over-ridden by other methods and constants of the same name.</p>
+
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         
+      <span class="k">module</span> <span class="nn">Play</span>
+        <span class="k">class</span> <span class="nc">SnakesAndLadder</span>
+          <span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+           <span class="nb">puts</span> <span class="s2">"Playing Snakes and Ladder with </span><span class="si">#{</span><span class="n">number</span><span class="si">}</span><span class="s2"> dice/dices"</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>      
+                  
+      <span class="k">module</span> <span class="nn">Cook</span>
+        <span class="k">class</span> <span class="nc">MixedVegetable</span>
+           <span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">vegetable</span><span class="p">)</span>
+             <span class="nb">puts</span> <span class="s2">"Cooking Mixed Vegeteable. Dicing </span><span class="si">#{</span><span class="n">vegetable</span><span class="si">}</span><span class="s2">"</span>
+           <span class="k">end</span>
+         <span class="k">end</span>
+      <span class="k">end</span>
+         
+      <span class="n">snakes_and_ladder</span> <span class="o">=</span> <span class="no">Play</span><span class="o">::</span><span class="no">SnakesAndLadder</span><span class="p">.</span><span class="nf">new</span>
+      <span class="n">snakes_and_ladder</span><span class="p">.</span><span class="nf">dice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
+      <span class="c1">#=&gt; "Playing Snakes and Ladder with 1 dice/dices"</span>
+         
+      <span class="n">mixed_vegetable</span> <span class="o">=</span> <span class="no">Cook</span><span class="o">::</span><span class="no">MixedVegetable</span><span class="p">.</span><span class="nf">new</span>
+      <span class="n">mixed_vegetable</span><span class="p">.</span><span class="nf">dice</span><span class="p">(</span><span class="s2">"Onions"</span><span class="p">)</span> 
+      <span class="c1">#=&gt; "Cooking Mixed Vegeteable. Dicing Onions"</span>
+ 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Modules help with implementation of mixins</strong> : <em>Mixins</em> gives us a way of adding functionality to the classes. Mixin is basically a module included to the class. When a Module is mixed in a class, the class will have access to the methods of the Module. In Ruby, <em>Multiple Inheritance</em> is not allowed with classes. Modules also help us implement <em>Multiple Inheritance</em>.</p>
+
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">class</span> <span class="nc">Song</span>
+     <span class="nb">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:artist</span><span class="p">,</span> <span class="ss">:duration</span>
+     <span class="c1"># include comparable class which gives us access to </span>
+     <span class="c1"># all the six comparator  methods (&lt;, &lt;=, ==, &gt;, &gt;= and between?)</span>
+ 
+     <span class="kp">include</span> <span class="no">Comparable</span>
+           
+     <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+       <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+       <span class="vi">@artist</span> <span class="o">=</span> <span class="n">artist</span>
+       <span class="vi">@duration</span> <span class="o">=</span> <span class="n">duration</span>
+     <span class="k">end</span>
+ 
+     <span class="c1"># define spaceship operator.</span>
+     <span class="c1"># As a class writer, you define the one method,</span>
+     <span class="c1">#  &lt;=&gt;, include Comparable, and get six comparison functions for free.</span>
+         
+     <span class="k">def</span> <span class="nf">&lt;</span><span class="o">=&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>   
+       <span class="nb">self</span><span class="p">.</span><span class="nf">duration</span> <span class="o">&lt;=&gt;</span> <span class="n">other</span><span class="p">.</span><span class="nf">duration</span>
+     <span class="k">end</span>
+   <span class="k">end</span>       
+          
+   <span class="n">song1</span> <span class="o">=</span> <span class="no">Song</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Shape of You"</span><span class="p">,</span> <span class="s2">"Ed Shereen"</span><span class="p">,</span> <span class="mi">225</span><span class="p">)</span>
+   <span class="n">song2</span> <span class="o">=</span> <span class="no">Song</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Cheap Thrills"</span><span class="p">,</span> <span class="s2">"Sia"</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+   <span class="n">song1</span> <span class="o">&lt;=&gt;</span> <span class="n">song2</span>	<span class="c1">#=&gt;	-1</span>
+   <span class="n">song1</span>  <span class="o">&lt;</span>  <span class="n">song2</span>	<span class="c1">#=&gt;	true</span>
+   <span class="n">song1</span> <span class="o">==</span>  <span class="n">song1</span>	<span class="c1">#=&gt;	true</span>
+   <span class="n">song1</span>  <span class="o">&gt;</span>  <span class="n">song2</span>	<span class="c1">#=&gt; false</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET

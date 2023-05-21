@@ -1,0 +1,7 @@
+I"Ô<p>The <strong>Stylecheck</strong> gem provides a bunch of rake tasks to run code style checks.
+Currently it supports <code class="language-plaintext highlighter-rouge">Ruby</code> (via <code class="language-plaintext highlighter-rouge">rubocop</code>) and <code class="language-plaintext highlighter-rouge">SCSS</code> (via <code class="language-plaintext highlighter-rouge">scss-lint</code>). I will be adding more
+languages to it very soon. Typically one would hook it up to CI to run it along with the application tests.
+One shortcoming of this approach is that unlike HoundCI it runs checks on all included files, not just the
+changed ones.
+Check it out <a href="https://github.com/soumyaveer/stylecheck">here</a>.</p>
+:ET

@@ -1,0 +1,28 @@
+I"Ã
+<p>The most difficult part before starting any project is to come up with something really interesting to work on. During my research for this project, I realized that my last two projects were confined to <em>Books</em>, and I wanted to expand further. I wanted to create something for everyone - lovers of painting, movies, books and programming like myself, etc. This is how I came up with the idea of creating <strong>TriviaZone</strong>, an application which is a combination of fun as well as learning experience.</p>
+
+<p>What is <strong>TriviaZone</strong>? As the name suggests, this is an application that allows you to play or create your favourite trivia and compete for the top three positions on the Leaderboard.</p>
+
+<p>From userâ€™s point of view, this application provides user with multiple features:</p>
+<ol>
+  <li>User can <em>sign_up</em> for an account or <em>sign_in</em> in case the account is already present.</li>
+  <li>User can also <em>sign_up</em> or <em>sign_in</em> via <em>Facebook</em>.</li>
+  <li>Once, signed in, User can see the scores of his or her previously played trivias.</li>
+  <li>User is provided with options to <em>Add a new Trivia</em>, <em>Play Trivia</em>, <em>Search Trivia</em> or check the <em>Leaderboard</em>.</li>
+  <li>The options of <em>editing</em> or <em>deleting</em> the trivia created by him/her are also provided . (User is not authorized to <em>edit</em> or <em>delete</em> trivia created by any other user.</li>
+</ol>
+
+<p><strong>TriviaZone</strong> is created on <em>Ruby on Rails</em> framework. The main challenges that I came across while working on this project were:</p>
+<ol>
+  <li>Two levels of <code class="language-plaintext highlighter-rouge">form nesting</code>.</li>
+  <li>The integration of gems <code class="language-plaintext highlighter-rouge">devise</code> and <code class="language-plaintext highlighter-rouge">omniauth</code>.</li>
+  <li>Multiple routes needed <code class="language-plaintext highlighter-rouge">nesting</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">Whitelisting</code> of <code class="language-plaintext highlighter-rouge">unpermitted strong parameters</code>.</li>
+  <li>Thinking of a way to capture the correct answers after the trivias were played.</li>
+</ol>
+
+<p>After spending a lot of days debugging, reading and re-reading tutorials, I successfully overcame these challenges. Every hour spent was a great learning experience which left me with a little more knowledge than I had when I stared this project. I am over joyed with the fact that I decided to work on <strong>TriviaZone</strong>.</p>
+
+<p>Check out the source code of <strong>TriviaZone</strong> <a href="https://github.com/soumyaveer/trivia-zone">here</a>.</p>
+
+:ET

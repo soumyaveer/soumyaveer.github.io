@@ -1,0 +1,96 @@
+I"P<p>In the last blog we discussed <strong>BFS Algorithm</strong>(put link here) which is a graph traversal algorithm that traverses broadly or width - wise. In this blog I will discuss another approach or algorithm for Graph traversal - <strong>Depth First Search or DFS</strong></p>
+
+<h3 id="what-is-depth-first-search-algorithm">What is Depth First Search Algorithm?</h3>
+<p><strong>DFS</strong> is an algorithm that traverses the graph from top to down, or length - wise. The node visits it’s children before visiting it’s neighbors. One thing to note  in DFS is that the data structure used is <em>Stacks</em>. Recursion uses stack, and we are using recursion for the implementation of our algorithm.</p>
+
+<h3 id="dfs-traversal-explanation">DFS traversal Explanation</h3>
+<p>To determine the unvisited, visited and explored nodes, let’s give them colors.</p>
+<ul>
+  <li>black -&gt; unvisited</li>
+  <li>blue -&gt; discovered / visited</li>
+  <li>red -&gt; explored</li>
+</ul>
+
+<p>Initially the graph looks like this.</p>
+
+<p><img src="/assets/images/graph-DFS/graph.jpg" alt="Step1" /></p>
+
+<p>Step 1: We select our starting vertex as A. We want to search the nodes length-wise, till we have traversed the whole graph. We mark A as discovered and push it to the stack.
+<img src="/assets/images/graph-DFS/step1.png" alt="Step1" /></p>
+
+<p>Step 2: Nodes B, is reachable from node A, hence we mark it as discovered, and push B to the stack.
+<img src="/assets/images/graph-DFS/step2.png" alt="Step2" /></p>
+
+<p>Step 3: Node E is reachable from B. So me mark E as discovered as well and  push it to the stack.
+<img src="/assets/images/graph-DFS/step3.png" alt="Step3" /></p>
+
+<p>Step 4: Select node E, and we observe that node I is reachable from E. So me mark I as discovered and push it to the stack.
+<img src="/assets/images/graph-DFS/step4.png" alt="Step4" /></p>
+
+<p>Step 5: Because there are no more nodes to visit from node I. We return it from the stack and mark it as explored(red).
+<img src="/assets/images/graph-DFS/step5.png" alt="Step5" /></p>
+
+<p>Step 6: Because there are no more nodes to visit from node E. We return node E also from the stack and mark it as explored (red).
+<img src="/assets/images/graph-DFS/step6.png" alt="Step6" /></p>
+
+<p>Step 7: We have reached node B and observe that node F is reachable from B. So we mark F as discovered.
+ <img src="/assets/images/graph-DFS/step7.png" alt="Step7" /></p>
+
+<p>Step 8: F has no children to discover. So we return F and mark it as explored(red)
+ <img src="/assets/images/graph-DFS/step8.png" alt="Step8" /></p>
+
+<p>Step 9: Same with node B. B does not have any more children to discover, so we return it and mark B as explored (red).
+ <img src="/assets/images/graph-DFS/step9.png" alt="Step9" /></p>
+
+<p>Step 10: Next we observe that C is also reachable from A. So we mark C as discovered. 
+ <img src="/assets/images/graph-DFS/step10.png" alt="Step10" /></p>
+
+<p>Step 11: Node G is reachable from C. So we mark G as discovered.
+ <img src="/assets/images/graph-DFS/step11.png" alt="Step11" /></p>
+
+<p>Step 12: Node G has no children to be discovered. So we return node G and mark it as explored(red).
+<img src="/assets/images/graph-DFS/step12.png" alt="Step12" /></p>
+
+<p>Step 13: All the children of node C has also been explored, and no other node is reachable from C. So we mark C as explored (red) and pop it from the stack.
+<img src="/assets/images/graph-DFS/step13.png" alt="Step13" /></p>
+
+<p>Step 14: Now we select node D, and see that node D is reachable from A. So me mark D as discovered. 
+<img src="/assets/images/graph-DFS/step14.png" alt="Step14" /></p>
+
+<p>Step 15: Now we select node H, which is reachable from node D. We mark H as discovered. 
+<img src="/assets/images/graph-DFS/step15.png" alt="Step15" /></p>
+
+<p>Step 16: Similarly for node J. We observe that J is reachable from H and mark it as discovered.
+<img src="/assets/images/graph-DFS/step16.png" alt="Step16" /></p>
+
+<p>Step 17: Because there are no more nodes to visit from node J. We return it from the stack and mark it as explored (red).
+<img src="/assets/images/graph-DFS/step17.png" alt="Step17" /></p>
+
+<p>Step 18: Same with node H. There are no more nodes to be discovered from H, so we mark it as explored (red) and return it from the stack.
+ <img src="/assets/images/graph-DFS/step18.png" alt="Step18" /></p>
+
+<p>Step 19: D also has no children left to be discovered. So we return D and mark it as explored (red)
+ <img src="/assets/images/graph-DFS/step19.png" alt="Step19" /></p>
+
+<p>Step 20: Finally we reach node A. all the children of node A has been explored. So, we mark A as explored (red) and pop it from the stack. Completing the traversal of our graph.
+ <img src="/assets/images/graph-DFS/step20.png" alt="Step20" /></p>
+
+<h3 id="algorithm---dfs">Algorithm - DFS:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mark vertex(v) as discovered(grey)
+2. Get neighbors of v. Calling each neighbor w
+3. loop through neighbors:
+   3.1 if neighbor is undiscovered (white)
+       3.1.1 Visit  vertex w
+4. Mark u as explored (black)
+</code></pre></div></div>
+
+<h3 id="time-and-space-complexity">Time and Space complexity</h3>
+
+<p>In the algorithm, we are only iterating exactly for each vertex.
+Therefore, assuming that we have V vertices, every vertex is visited once and check the edges E of our adjacency list once, our time complexity will be O(V + E).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F(n) = Visiting vertices(V) + number of Edges(E) in adjacency list = O(V) + O(E)
+	 = O(V  + E)
+</code></pre></div></div>
+
+:ET
