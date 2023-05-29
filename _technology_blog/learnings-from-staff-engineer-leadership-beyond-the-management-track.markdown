@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learnings from Staff Engineer - Leadership Beyond the Management Track
-date:  2023-05-27 16:00:00
+date:  2023-05-29 16:00:00
 categories: main
 banner_image: "staff-engineer-leadership-beyond-management-track.jpeg"
 ---
