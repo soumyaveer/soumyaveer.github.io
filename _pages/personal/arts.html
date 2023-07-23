@@ -7,10 +7,21 @@ title: {{ site.name }}
 
 {% include navbar.html currentNavItem="personal" currentSubNavItem="arts" %}
 
-<main class="container">
+<div class="container">
   <div class="row">
-    <div class="col-12 text-center">
-      My sketches will be showcased here soon.
+    <div class="col-sm-6 offset-sm-3">
+      <h2 class="post-title">Arts</h2>
+      <ul class="list-unstyled list-posts">
+
+        {% for post in site.art_blog reversed %}
+        <li>
+          <div>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+          <div class="date text-muted small">{{ post.date | date_to_string }}</div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
-</main>
+</div>

@@ -21,6 +21,11 @@ collections:
     permalink: /personal/books/:name
     home_url: /personal/books
 
+  art_blog:
+    output: true
+    permalink: /personal/arts/:name
+    home_url: /personal/arts
+
 include: ["_pages"]
 
 # Configure addons
