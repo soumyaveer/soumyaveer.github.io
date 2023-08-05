@@ -69,4 +69,4 @@ Once we started working on the service, we encountered our main challenges.
    
    **Resolution**: After much investigation, it was discovered that the downstream dependency got updated when we were updating the service. This dependency was causing the dashes to underscore conversions. To resolve this issue, we fixed the exact dependency version in the Gemfile of the service. 
 
-After encountering and resolving all these challenges, the service was deployed successfully. And has been stable since. 
+After encountering and resolving all these challenges, the service was deployed successfully. 
