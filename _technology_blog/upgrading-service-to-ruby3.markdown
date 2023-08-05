@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrading Service to Ruby 3
+title: Upgrading Services to Ruby version 3.1
 date:  2023-08-04 19:00:00
 categories: main
 banner_image: "ruby-upgrade-3.jpeg"
